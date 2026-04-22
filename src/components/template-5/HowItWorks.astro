@@ -1,0 +1,132 @@
+---
+import { Copy, Brain, Settings, Download } from "@lucide/astro";
+---
+
+<section id="how-it-works" class="how-it-works-5 section">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="section-title">Cara Kerja Clipcash AI</h2>
+      <p class="section-subtitle">Gak perlu skill editing, biar AI yang ngerjain semuanya buat lo.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-icon">
+          <Copy class="h-8 w-8" />
+        </div>
+        <h3>Copy Link Video</h3>
+        <p>Tinggal copy link YouTube video panjang yang mau lo jadiin klip pendek.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-icon">
+          <Brain class="h-8 w-8" />
+        </div>
+        <h3>AI Proses Video</h3>
+        <p>Sistem otomatis potong momen viral, deteksi hook, dan kasih subtitle keren.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-icon">
+          <Settings class="h-8 w-8" />
+        </div>
+        <h3>Konfigurasi</h3>
+        <p>Atur posisi subtitle, warna, atau edit sedikit sesuai selera lo.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-icon">
+          <Download class="h-8 w-8" />
+        </div>
+        <h3>Download & Cuan</h3>
+        <p>Klip siap upload ke TikTok/Reels. Fokus monetisasi dan tunggu hasilnya.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .how-it-works-5 {
+    padding: 100px 0;
+    background: #0A0A0A;
+  }
+
+  .section-title {
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 16px;
+  }
+
+  .section-subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 60px;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+
+  .step-card {
+    background: #151515;
+    padding: 40px 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    transition: var(--transition);
+  }
+
+  .step-card:hover {
+    border-color: var(--color-yellow, #FAB005);
+    transform: translateY(-10px);
+  }
+
+  .step-num {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    font-size: 64px;
+    font-weight: 900;
+    color: rgba(250, 176, 5, 0.1);
+  }
+
+  .step-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(250, 176, 5, 0.1);
+    color: var(--color-yellow, #FAB005);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .step-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+  }
+
+  .step-card p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 992px) {
+    .steps-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 576px) {
+    .steps-grid { grid-template-columns: 1fr; }
+  }
+</style>

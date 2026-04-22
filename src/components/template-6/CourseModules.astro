@@ -1,0 +1,138 @@
+---
+import { Rocket, Megaphone, Target, BarChart3, Users, Globe } from "@lucide/astro";
+---
+
+<section id="course" class="course-modules section">
+  <div class="container-narrow text-center">
+    <div class="section-header">
+      <h2>Course Modules</h2>
+    </div>
+
+    <div class="modules-grid">
+      <div class="module-card">
+        <div class="module-icon"><Rocket class="h-8 w-8" /></div>
+        <h3>Launch Strategy</h3>
+        <p>Launch your milestones and launch strategy.</p>
+      </div>
+
+      <div class="module-card">
+        <div class="module-icon"><Megaphone class="h-8 w-8" /></div>
+        <h3>Traffic Secrets</h3>
+        <p>Exsess communication traffic and performances.</p>
+      </div>
+
+      <div class="module-card">
+        <div class="module-icon"><Target class="h-8 w-8" /></div>
+        <h3>Sales Funnels</h3>
+        <p>Exctra your content sales within sales funnels.</p>
+      </div>
+
+      <div class="module-card">
+        <div class="module-icon"><BarChart3 class="h-8 w-8" /></div>
+        <h3>Stats Funnels</h3>
+        <p>Procets your teer sales online business.</p>
+      </div>
+
+      <div class="module-card">
+        <div class="module-icon"><Users class="h-8 w-8" /></div>
+        <h3>Sales Training</h3>
+        <p>Edhans online cutces winners and connels.</p>
+      </div>
+
+      <div class="module-card">
+        <div class="module-icon"><Globe class="h-8 w-8" /></div>
+        <h3>Digital Marketing</h3>
+        <p>Develop your thord engpower strategy.</p>
+      </div>
+    </div>
+
+    <div class="cta-banner">
+       <a href="#pricing" class="btn-yellow-wide">YES! I'M READY TO BUILD MY EMPIRE!</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .course-modules {
+    padding: 100px 0;
+    background: white;
+  }
+
+  .container-narrow {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .section-header h2 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 60px;
+  }
+
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+  }
+
+  .module-card {
+    padding: 40px 24px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .module-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-color: #d32f2f;
+  }
+
+  .module-icon {
+    width: 64px;
+    height: 64px;
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    color: #1a1a1a;
+  }
+
+  .module-card h3 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+
+  .module-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .btn-yellow-wide {
+    display: inline-block;
+    background: #ffeb3b;
+    color: #1a1a1a;
+    padding: 20px 60px;
+    border-radius: 12px;
+    font-weight: 900;
+    font-size: 20px;
+    text-decoration: none;
+    box-shadow: 0 15px 30px rgba(255, 235, 59, 0.4);
+  }
+
+  @media (max-width: 992px) {
+    .modules-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 576px) {
+    .modules-grid { grid-template-columns: 1fr; }
+    .btn-yellow-wide { font-size: 16px; padding: 16px 30px; width: 100%; }
+  }
+</style>

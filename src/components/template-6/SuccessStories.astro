@@ -1,0 +1,159 @@
+---
+import { Image } from "astro:assets";
+import s1 from "../../assets/template-6/student-1.png";
+import s2 from "../../assets/template-6/student-2.png";
+import { Star } from "@lucide/astro";
+---
+
+<section id="about" class="success-stories">
+  <div class="container-narrow">
+    <div class="section-header text-center">
+      <h2>STUDENT SUCCESS STORIES</h2>
+    </div>
+
+    <div class="stories-grid">
+      <div class="story-card">
+        <div class="story-user">
+          <Image src={s1} alt="Student" class="story-av" />
+          <div class="user-meta">
+            <h4>Saman Namer</h4>
+            <div class="stars">
+              <Star class="h-4 w-4 fill-yellow" />
+              <Star class="h-4 w-4 fill-yellow" />
+              <Star class="h-4 w-4 fill-yellow" />
+              <Star class="h-4 w-4 fill-yellow" />
+              <Star class="h-4 w-4 fill-yellow" />
+            </div>
+          </div>
+        </div>
+        <p class="story-title">Amazing Course!</p>
+        <p class="story-text">
+          The rew are mantlury tisur business and ranpnt covin complentia to your instrol openizod roomse courserf. Then your Wealth Acceleraton Wealth Stasors!
+        </p>
+      </div>
+
+      <div class="story-card">
+        <div class="story-user">
+          <Image src={s2} alt="Student" class="story-av" />
+          <div class="user-meta">
+            <h4>Benily Hamer</h4>
+            <div class="stars">
+              <Star class="h-4 w-4 fill-yellow" />
+              <Star class="h-4 w-4 fill-yellow" />
+              <Star class="h-4 w-4 fill-yellow" />
+              <Star class="h-4 w-4 fill-yellow" />
+              <Star class="h-4 w-4 fill-yellow" />
+            </div>
+          </div>
+        </div>
+        <p class="story-title">Made $10k in Month 1!</p>
+        <p class="story-text">
+          Hly amos course ws your business ov svie maife. Itina in imosnon amat it want to patus in and vfoe strand and help paeoe con onfire buctise somioses.
+        </p>
+      </div>
+    </div>
+
+    <div class="cta-box text-center">
+      <a href="#pricing" class="btn-yellow-large">CONTINUE READING</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .success-stories {
+    padding: 100px 0;
+    background: #fdfdfd;
+  }
+
+  .container-narrow {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .section-header h2 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+  }
+
+  .stories-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 60px;
+  }
+
+  .story-card {
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+  }
+
+  .story-user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .story-av {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .user-meta h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .stars {
+    display: flex;
+    gap: 2px;
+  }
+
+  .fill-yellow {
+    fill: #ffeb3b;
+    color: #ffeb3b;
+  }
+
+  .story-title {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: #d32f2f;
+  }
+
+  .story-text {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .btn-yellow-large {
+    display: inline-block;
+    background: #ffeb3b;
+    color: #1a1a1a;
+    padding: 16px 48px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 18px;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(255, 235, 59, 0.3);
+    transition: transform 0.3s;
+  }
+
+  .btn-yellow-large:hover {
+    transform: translateY(-3px);
+  }
+
+  @media (max-width: 768px) {
+    .stories-grid { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,85 @@
+---
+import { Menu, X } from "@lucide/astro";
+---
+
+<header class="sales-header">
+  <div class="container flex-header">
+    <div class="logo">
+      <a href="/template-6">
+        <span class="logo-icon">📈</span>
+        <span class="logo-text">DIGITAL <span class="bold">WEALTH</span></span>
+      </a>
+    </div>
+    
+    <nav class="nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#course">Course</a></li>
+        <li><a href="#bonuses">Bonuses</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <button class="mobile-toggle" id="mobile-toggle-6">
+      <Menu id="menu-icon" />
+      <X id="close-icon" class="hidden" />
+    </button>
+  </div>
+</header>
+
+<style>
+  .sales-header {
+    padding: 24px 0;
+    background: white;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .flex-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-text {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+  }
+
+  .logo-text .bold {
+    font-weight: 800;
+  }
+
+  .nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+  }
+
+  .nav a {
+    color: #1a1a1a;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+  }
+
+  .nav a:hover {
+    color: #d32f2f;
+  }
+
+  .mobile-toggle {
+    display: none;
+  }
+
+  @media (max-width: 992px) {
+    .nav { display: none; }
+    .mobile-toggle { display: block; background: none; border: none; cursor: pointer; }
+  }
+</style>

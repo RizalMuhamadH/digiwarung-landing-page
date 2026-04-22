@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/template-5/Header.astro";
+import Hero from "../../components/template-5/Hero.astro";
+import HowItWorks from "../../components/template-5/HowItWorks.astro";
+import Comparison from "../../components/template-5/Comparison.astro";
+import Pricing from "../../components/template-5/Pricing.astro";
+import Footer from "../../components/template-5/Footer.astro";
+---
+
+<Layout 
+  title="ClipCash AI - AI YANG BIKIN KONTEN, LO TINGGAL NUNGGU CUAN" 
+  description="Jadi Clipper & Raih Penghasilan 10 - 15 Juta Lebih Walaupun Anda Gaptek & Gak Jago Ngedit. Cukup pake Clipcash AI Sistem."
+>
+  <div class="template-5-root">
+    <Header />
+    <main>
+      <Hero />
+      <HowItWorks />
+      <Comparison />
+      <Pricing />
+    </main>
+    <Footer />
+  </div>
+</Layout>
+
+<style is:global>
+  :root {
+    --color-yellow: #FAB005;
+    --transition: all 0.3s ease;
+  }
+
+  .template-5-root {
+    background: #0F0F0F;
+    color: white;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .template-5-root section {
+    scroll-margin-top: 80px;
+  }
+
+  .template-5-root .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .template-5-root .text-center { text-align: center; }
+</style>

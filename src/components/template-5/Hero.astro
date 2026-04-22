@@ -1,0 +1,272 @@
+---
+import { Play, TrendingUp, ShieldCheck, Zap } from "@lucide/astro";
+---
+
+<section id="home" class="hero-5">
+  <div class="container">
+    <div class="hero-flex">
+      <div class="hero-content">
+        <div class="badge-new">
+          <Zap class="h-4 w-4" />
+          <span>Sistem AI Terbaru 2026</span>
+        </div>
+        <h1>AI YANG BIKIN KONTEN, LO TINGGAL NUNGGU <span class="highlight">CUAN</span></h1>
+        <p class="hero-desc">
+          Jadi Clipper & Raih Penghasilan 10 - 15 Juta Lebih Walaupun Anda Gaptek & Gak Jago Ngedit. Cukup pake Clipcash AI Sistem, Tinggal copy link youtube, terus langsung upload.
+        </p>
+        <div class="hero-actions">
+          <a href="#pricing" class="btn btn-primary btn-lg">Akses Sekarang - Rp199.000</a>
+          <a href="#" class="btn-video">
+            <div class="play-icon">
+              <Play class="h-5 w-5 fill-yellow" />
+            </div>
+            Tonton Cara Kerjanya
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <TrendingUp class="h-5 w-5 text-yellow" />
+            <span>2435+ Orang Udah Akses</span>
+          </div>
+          <div class="stat-item">
+            <ShieldCheck class="h-5 w-5 text-yellow" />
+            <span>Garansi 7 Hari Uang Kembali</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-card">
+           <!-- Placeholder for AI Dashboard Image -->
+           <div class="dashboard-preview">
+              <div class="dashboard-header">
+                 <div class="dots"><span></span><span></span><span></span></div>
+              </div>
+              <div class="dashboard-body">
+                 <div class="video-placeholder">
+                    <div class="ai-scanning"></div>
+                    <p>AI Processing Video...</p>
+                 </div>
+                 <div class="sidebar-mock">
+                    <div class="mock-line short"></div>
+                    <div class="mock-line"></div>
+                    <div class="mock-line"></div>
+                 </div>
+              </div>
+           </div>
+           
+           <!-- Floating elements -->
+           <div class="floating-box box-1">
+              <span class="currency">Rp</span>
+              <span class="amount">15.000.000+</span>
+           </div>
+           <div class="floating-box box-2">
+              <Zap class="h-5 w-5 text-yellow" />
+              <span>Viral Hook Detected</span>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-5 {
+    padding: 160px 0 100px;
+    background: radial-gradient(circle at top right, rgba(250, 176, 5, 0.05), transparent), #0F0F0F;
+    color: white;
+    overflow: hidden;
+  }
+
+  .hero-flex {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .hero-content {
+    flex: 1;
+  }
+
+  .badge-new {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(250, 176, 5, 0.1);
+    color: var(--color-yellow, #FAB005);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(250, 176, 5, 0.2);
+  }
+
+  .hero-content h1 {
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  .highlight {
+    color: var(--color-yellow, #FAB005);
+    text-shadow: 0 0 20px rgba(250, 176, 5, 0.3);
+  }
+
+  .hero-desc {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 550px;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .btn-primary {
+    background: var(--color-yellow, #FAB005);
+    color: #0F0F0F;
+    padding: 18px 32px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 18px;
+    text-decoration: none;
+    box-shadow: 0 15px 30px rgba(250, 176, 5, 0.2);
+  }
+
+  .btn-video {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .play-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .fill-yellow { fill: var(--color-yellow, #FAB005); color: var(--color-yellow, #FAB005); }
+
+  .hero-stats {
+    display: flex;
+    gap: 32px;
+  }
+
+  .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .hero-visual {
+    flex: 1;
+    position: relative;
+  }
+
+  .visual-card {
+    background: #1A1A1A;
+    border-radius: 24px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+    position: relative;
+  }
+
+  .dashboard-preview {
+    background: #0F0F0F;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .dashboard-header {
+    background: #252525;
+    padding: 10px;
+  }
+
+  .dots { display: flex; gap: 6px; }
+  .dots span { width: 8px; height: 8px; border-radius: 50%; background: #444; }
+
+  .dashboard-body {
+    display: flex;
+    height: 300px;
+  }
+
+  .video-placeholder {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #222;
+    position: relative;
+  }
+
+  .ai-scanning {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-yellow, #FAB005);
+    box-shadow: 0 0 10px var(--color-yellow, #FAB005);
+    animation: scan 3s linear infinite;
+  }
+
+  @keyframes scan {
+    0% { top: 0; }
+    100% { top: 100%; }
+  }
+
+  .sidebar-mock {
+    width: 100px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mock-line { height: 8px; background: #222; border-radius: 4px; }
+  .mock-line.short { width: 60%; }
+
+  .floating-box {
+    position: absolute;
+    background: white;
+    color: #0F0F0F;
+    padding: 12px 20px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    z-index: 10;
+  }
+
+  .box-1 { top: -20px; right: -20px; background: #FAB005; color: #0F0F0F; font-weight: 800; }
+  .box-2 { bottom: 40px; left: -40px; }
+
+  @media (max-width: 992px) {
+    .hero-flex { flex-direction: column; text-align: center; }
+    .hero-content h1 { font-size: 40px; }
+    .hero-actions { justify-content: center; flex-direction: column; }
+    .hero-stats { justify-content: center; flex-wrap: wrap; }
+    .hero-visual { margin-top: 60px; width: 100%; max-width: 500px; }
+  }
+</style>

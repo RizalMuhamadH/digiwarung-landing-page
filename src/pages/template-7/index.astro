@@ -1,0 +1,45 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Hero7 from "../../components/template-7/Hero7.astro";
+import CaseStudies7 from "../../components/template-7/CaseStudies7.astro";
+import Features7 from "../../components/template-7/Features7.astro";
+import Comparison7 from "../../components/template-7/Comparison7.astro";
+import Pricing7 from "../../components/template-7/Pricing7.astro";
+import SalesHeader from "../../components/template-6/SalesHeader.astro";
+import SalesFooter from "../../components/template-6/SalesFooter.astro";
+---
+
+<Layout
+  title="ClipCash AI - DUPLIKASI PERSIS"
+  description="AI YANG BIKIN KONTEN, LO TINGGAL NUNGGU CUAN. Jadi Clipper & Raih Penghasilan 10 - 15 Juta Lebih."
+>
+  <div class="template-7-root">
+    <!-- <SalesHeader /> -->
+    <main>
+      <Hero7 />
+      <CaseStudies7 />
+      <Features7 />
+      <Comparison7 />
+      <Pricing7 />
+    </main>
+    <SalesFooter />
+  </div>
+</Layout>
+
+<style is:global>
+  .template-7-root {
+    background: white;
+    color: #000;
+    font-family: "Inter", sans-serif;
+  }
+
+  .template-7-root section {
+    scroll-margin-top: 80px;
+  }
+
+  .template-7-root .container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+</style>

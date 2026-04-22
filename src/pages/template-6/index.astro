@@ -1,0 +1,37 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SalesHeader from "../../components/template-6/SalesHeader.astro";
+import SalesHero from "../../components/template-6/SalesHero.astro";
+import SuccessStories from "../../components/template-6/SuccessStories.astro";
+import CourseModules from "../../components/template-6/CourseModules.astro";
+import SalesPricing from "../../components/template-6/SalesPricing.astro";
+import SalesFooter from "../../components/template-6/SalesFooter.astro";
+---
+
+<Layout
+  title="Digital Wealth Accelerator - Launch Your 6-Figure Business"
+  description="Master the Strategies the Pro's Use to Achieve Financial Freedom. Discover the Exact Blueprint to Launch & Scale Your Profitable 6-Figure Online Business in 2024!"
+>
+  <div class="template-6-root">
+    <SalesHeader />
+    <main>
+      <SalesHero />
+      <SuccessStories />
+      <CourseModules />
+      <SalesPricing />
+    </main>
+    <SalesFooter />
+  </div>
+</Layout>
+
+<style is:global>
+  .template-6-root {
+    background: white;
+    color: #1a1a1a;
+    font-family: "Inter", sans-serif;
+  }
+
+  .template-6-root section {
+    scroll-margin-top: 80px;
+  }
+</style>

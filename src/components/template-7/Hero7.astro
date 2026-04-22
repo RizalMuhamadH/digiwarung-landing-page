@@ -1,0 +1,103 @@
+---
+import { Play } from "@lucide/astro";
+---
+
+<section id="home" class="hero-7">
+  <div class="container-narrow text-center">
+    <h1 class="main-title">AI YANG BIKIN KONTEN, <br /><span class="highlight">LO TINGGAL NUNGGU CUAN</span></h1>
+    <h2 class="sub-title">Jadi Clipper & Raih Penghasilan 10 - 15 Juta Lebih Walaupun Anda Gaptek & Gak Jago Ngedit</h2>
+    <p class="intro-text">Cukup pake Clipcash AI Sistem, Tinggal copy link youtube/referensi, terus langsung upload TikTok, Reels, Atau Shorts, dan kamu tinggal fokus monetisasi.</p>
+
+    <div class="vsl-container">
+      <div class="vsl-placeholder">
+        <div class="play-icon">
+          <Play class="h-10 w-10 fill-white" />
+        </div>
+        <span>Tonton Video Ini Biar Tahu Cara Kerja Clipcash AI Sistem💰</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-7 {
+    padding: 80px 0 40px;
+    background: white;
+  }
+
+  .container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .main-title {
+    font-size: 42px;
+    font-weight: 950;
+    line-height: 1.1;
+    color: #000;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+  }
+
+  .highlight {
+    background: #ffeb3b;
+    padding: 0 8px;
+    display: inline-block;
+  }
+
+  .sub-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #d32f2f;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+
+  .intro-text {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+
+  .vsl-container {
+    margin-bottom: 40px;
+  }
+
+  .vsl-placeholder {
+    aspect-ratio: 16/9;
+    background: #000;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  }
+
+  .play-icon {
+    width: 72px;
+    height: 72px;
+    background: #d32f2f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    transition: transform 0.3s;
+  }
+
+  .vsl-placeholder:hover .play-icon {
+    transform: scale(1.1);
+  }
+
+  .fill-white { fill: white; color: white; }
+
+  @media (max-width: 768px) {
+    .main-title { font-size: 32px; }
+    .sub-title { font-size: 18px; }
+  }
+</style>
