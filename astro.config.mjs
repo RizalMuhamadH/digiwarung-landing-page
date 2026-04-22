@@ -1,5 +1,4 @@
 // @ts-check
-// Configuration for Biccas Landing Page
 
 import { defineConfig } from 'astro/config';
 
