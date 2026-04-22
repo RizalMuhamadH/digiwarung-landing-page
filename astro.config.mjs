@@ -1,5 +1,15 @@
 // @ts-check
+// Configuration for Biccas Landing Page
+
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+import tailwindcss from '@tailwindcss/vite';
+import cloudflare from '@astrojs/cloudflare';
+
+export default defineConfig({
+  vite: {
+    plugins: [tailwindcss()]
+  },
+
+  adapter: cloudflare()
+});

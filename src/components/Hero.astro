@@ -1,0 +1,364 @@
+---
+import { Image } from "astro:assets";
+import heroImage from "../assets/hero-man.png";
+---
+
+<section id="home" class="hero">
+  <div class="container flex-hero">
+    <div class="hero-content">
+      <h1 class="hero-title">We're here to Increase your Productivity</h1>
+      <div class="underline-svg">
+        <svg
+          width="498"
+          height="22"
+          viewBox="0 0 498 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2.5 19.5C108.5 7.5 316.5 -4.5 495.5 14"
+            stroke="#52BD94"
+            stroke-width="5"
+            stroke-linecap="round"></path>
+        </svg>
+      </div>
+      <p class="hero-subtitle">
+        Let's make your work more organized and easily using the Taskio
+        Dashboard with many of the latest features in managing work every day.
+      </p>
+      <div class="hero-cta">
+        <a href="#" class="btn btn-primary btn-lg">Try free trial</a>
+        <a href="#" class="btn btn-video">
+          <span class="play-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M8 5V19L19 12L8 5Z" fill="#191A15"></path>
+            </svg>
+          </span>
+          View Demo
+        </a>
+      </div>
+    </div>
+    <div class="hero-image-container">
+      <div class="image-wrapper">
+        <Image
+          src={heroImage}
+          alt="Professional working"
+          class="main-hero-img"
+        />
+
+        <!-- Decorative UI Elements -->
+        <div class="floating-card card-income">
+          <div class="card-icon income-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2V22M12 2L5 9M12 2L19 9"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <div class="card-text">
+            <p>Enter income</p>
+            <h3>$1,240</h3>
+          </div>
+        </div>
+
+        <div class="floating-card card-total">
+          <div class="card-icon total-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 17L9 11L13 15L21 7M21 7H15M21 7V13"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <div class="card-text">
+            <p>Total Balance</p>
+            <h3>$42,430</h3>
+          </div>
+        </div>
+
+        <div class="floating-badge badge-check">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16.6667 5L7.50001 14.1667L3.33334 10"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </div>
+
+        <div class="floating-badge badge-database">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21 12C21 14.7614 16.9706 17 12 17C7.02944 17 3 14.7614 3 12M21 12C21 9.23858 16.9706 7 12 7C7.02944 7 3 9.23858 3 12M21 12V18C21 20.7614 16.9706 23 12 23C7.02944 23 3 20.7614 3 18V12M21 6C21 8.76142 16.9706 11 12 11C7.02944 11 3 8.76142 3 6C3 3.23858 7.02944 1 12 1C16.9706 1 21 3.23858 21 6Z"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 180px 0 100px;
+    background-color: var(--color-white);
+    overflow: hidden;
+  }
+
+  .flex-hero {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .hero-content {
+    flex: 1;
+    position: relative;
+  }
+
+  .hero-title {
+    font-size: 84px;
+    font-weight: 800;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+    letter-spacing: -2px;
+  }
+
+  .underline-svg {
+    position: absolute;
+    top: 175px;
+    left: 170px;
+    z-index: 0;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+    color: var(--color-text);
+    margin-bottom: 48px;
+    max-width: 540px;
+    line-height: 1.6;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .btn-lg {
+    padding: 18px 48px;
+    font-size: 18px;
+    box-shadow: 0 10px 20px rgba(82, 189, 148, 0.2);
+  }
+
+  .btn-video {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: 700;
+    color: var(--color-dark);
+  }
+
+  .play-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+  }
+
+  .main-hero-img {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+  }
+
+  .floating-card {
+    position: absolute;
+    background: white;
+    padding: 20px 28px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    animation: float 6s ease-in-out infinite;
+    z-index: 10;
+  }
+
+  .card-income {
+    top: 15%;
+    left: -80px;
+  }
+
+  .card-total {
+    bottom: 12%;
+    right: -60px;
+    animation-delay: 1.5s;
+  }
+
+  .card-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .income-icon {
+    background: #52bd94;
+  }
+  .total-icon {
+    background: #ffb352;
+  }
+
+  .card-text p {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin: 0 0 4px;
+    font-weight: 500;
+  }
+
+  .card-text h3 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .floating-badge {
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+  }
+
+  .badge-check {
+    top: 35%;
+    right: -20px;
+    background: #52bd94;
+    animation: float 5s ease-in-out infinite;
+  }
+
+  .badge-database {
+    bottom: 35%;
+    left: -20px;
+    background: #6d5bff;
+    animation: float 7s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @media (max-width: 992px) {
+    .flex-hero {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 48px;
+    }
+
+    .hero-subtitle {
+      margin: 0 auto 40px;
+    }
+
+    .hero-cta {
+      justify-content: center;
+    }
+
+    .underline-svg {
+      display: none;
+    }
+
+    .hero-image-container {
+      margin-top: 60px;
+    }
+
+    .card-income,
+    .card-total {
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: fit-content;
+    }
+
+    .card-income {
+      top: -30px;
+    }
+    .card-total {
+      bottom: -30px;
+    }
+  }
+</style>

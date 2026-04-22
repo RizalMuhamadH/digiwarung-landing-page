@@ -1,0 +1,150 @@
+---
+import { Image } from "astro:assets";
+import expert1 from "../../assets/template-3/expert-1.png";
+import expert2 from "../../assets/template-3/expert-2.png";
+---
+
+<section id="expert" class="expert-cta section">
+  <div class="container">
+    <div class="expert-banner">
+      <div class="expert-text text-center">
+        <h2>Need a super hero?</h2>
+        <p>Do you require some help for your project: Conception workshop, prototyping, marketing strategy, landing page, UX/UI?</p>
+        <a href="#" class="btn btn-orange">Contact our expert</a>
+      </div>
+
+      <!-- Floating avatars with speech bubbles -->
+      <div class="avatars-container">
+        <div class="floating-avatar av-1">
+          <Image src={expert1} alt="Expert" class="av-img" />
+          <div class="bubble">I can take care of your pitch</div>
+        </div>
+        <div class="floating-avatar av-2">
+          <Image src={expert2} alt="Expert" class="av-img" />
+          <div class="bubble">I can help marketing strategy</div>
+        </div>
+        <div class="floating-avatar av-3">
+          <Image src={expert1} alt="Expert" class="av-img" />
+          <div class="bubble">I can design your website</div>
+        </div>
+        <div class="floating-avatar av-4">
+          <Image src={expert2} alt="Expert" class="av-img" />
+          <div class="bubble">I can define the profile of your users</div>
+        </div>
+        <div class="floating-avatar av-5">
+          <Image src={expert1} alt="Expert" class="av-img" />
+          <div class="bubble">I can prioritize your task</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .expert-cta {
+    padding: 120px 0;
+  }
+
+  .expert-banner {
+    background: #FFF4E6;
+    border-radius: 40px;
+    padding: 100px 60px;
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .expert-text {
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+  }
+
+  .expert-text h2 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: #1a1a1a;
+  }
+
+  .expert-text p {
+    font-size: 18px;
+    color: #4a4a4a;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+
+  .btn-orange {
+    background: var(--color-orange, #FF9900);
+    color: white;
+    padding: 16px 40px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .avatars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .floating-avatar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .av-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .bubble {
+    background: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1a1a1a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .bubble::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid white;
+  }
+
+  /* Position adjustments */
+  .av-1 { top: 15%; left: 10%; }
+  .av-2 { top: 15%; right: 10%; }
+  .av-3 { bottom: 15%; left: 15%; }
+  .av-4 { bottom: 10%; left: 45%; }
+  .av-5 { bottom: 15%; right: 15%; }
+
+  @media (max-width: 992px) {
+    .floating-avatar { display: none; }
+    .expert-banner { padding: 60px 20px; }
+    .expert-text h2 { font-size: 32px; }
+  }
+</style>

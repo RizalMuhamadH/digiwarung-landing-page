@@ -1,11 +1,161 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import preview1 from "../assets/benefits-image.png";
+import preview2 from "../assets/template-2/app-preview.png";
+import preview3 from "../assets/template-3/hero-illustration.png";
+import preview4 from "../assets/template-4/portfolio-1.png";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="DigiWarung - Landing Page Templates">
+  <main class="home-main">
+    <div class="container text-center">
+      <h1 class="main-title">
+        Landing Page <span class="text-primary">Templates</span>
+      </h1>
+      <p class="main-subtitle">
+        Choose a template to preview its design and features.
+      </p>
+
+      <div class="templates-grid">
+        <a href="/template-1" class="template-card">
+          <div
+            class="template-preview"
+            style={`background-image: url(${preview1.src})`}
+          >
+          </div>
+          <div class="template-info">
+            <h3>Template 1</h3>
+            <p>Productivity & SaaS Landing Page</p>
+          </div>
+        </a>
+
+        <a href="/template-2" class="template-card">
+          <div
+            class="template-preview"
+            style={`background-image: url(${preview2.src})`}
+          >
+          </div>
+          <div class="template-info">
+            <h3>Template 2</h3>
+            <p>Education & Learning Platform</p>
+          </div>
+        </a>
+
+        <a href="/template-3" class="template-card">
+          <div
+            class="template-preview"
+            style={`background-image: url(${preview3.src})`}
+          >
+          </div>
+          <div class="template-info">
+            <h3>Template 3</h3>
+            <p>Design Thinking & Management</p>
+          </div>
+        </a>
+
+        <a href="/template-4" class="template-card">
+          <div
+            class="template-preview"
+            style={`background-image: url(${preview4.src})`}
+          >
+          </div>
+          <div class="template-info">
+            <h3>Template 4</h3>
+            <p>Digital Agency & Portfolio</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
 </Layout>
+
+<style>
+  .home-main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 80px 0;
+  }
+
+  .text-center {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .main-title {
+    font-size: 64px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: #1a1a15;
+  }
+
+  .main-subtitle {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 60px;
+  }
+
+  .templates-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .template-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .template-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  }
+
+  .template-preview {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f5f5f5;
+    transition: transform 0.5s ease;
+  }
+
+  .template-card:hover .template-preview {
+    transform: scale(1.05);
+  }
+
+  .template-info {
+    padding: 32px;
+    text-align: left;
+  }
+
+  .template-info h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #1a1a15;
+  }
+
+  .template-info p {
+    color: #666;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .templates-grid {
+      grid-template-columns: 1fr;
+    }
+    .main-title {
+      font-size: 40px;
+    }
+  }
+</style>

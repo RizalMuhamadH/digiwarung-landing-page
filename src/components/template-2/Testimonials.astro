@@ -1,0 +1,146 @@
+---
+import { Image } from "astro:assets";
+import { ArrowLeft, ArrowRight } from "@lucide/astro";
+import p1 from "../../assets/template-2/person-1.png";
+import p2 from "../../assets/template-2/person-2.png";
+import p3 from "../../assets/template-2/hero-student.png";
+---
+
+<section id="testimonials" class="testimonials-2 section">
+  <div class="container">
+    <div class="testimonials-header flex">
+      <h2>What everyone says</h2>
+      <div class="carousel-controls">
+        <button class="control-btn"><ArrowLeft /></button>
+        <button class="control-btn active"><ArrowRight /></button>
+      </div>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>Lacus vestibulum ultricies mi risus, duis non, volutpat nullam non. Magna congue eros faucibus sed aliquet ac sed consectetur. Libero sem nisl vitae, placerat donec aliquam dui, habitant rhoncus.</p>
+        <div class="user-meta">
+          <Image src={p1} alt="User" class="avatar" />
+          <div>
+            <h4>Helen Jimmy</h4>
+            <span>Financial Director</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p>Odio rhoncus ornare ut quam. Adipiscing sed duis eget scelerisque id. In feugiat fucid enim sagittis adivina nisl, nec taciti. Facilitasis, ultrices ultrices neque, leo ultrices nisl.</p>
+        <div class="user-meta">
+          <Image src={p2} alt="User" class="avatar" />
+          <div>
+            <h4>Ralph Edwards</h4>
+            <span>Math Teacher</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p>Sagittis nam egestas ut ac malesuada proin risus. Morbi proin id nisl aliquam. Diam tellus, amet nec imperdiet. Neque in volutpat tellus, congue malesuada et nisl tellus s.</p>
+        <div class="user-meta">
+          <Image src={p3} alt="User" class="avatar" />
+          <div>
+            <h4>Hellena John</h4>
+            <span>Psychology Student</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials-2 {
+    background: #fdfdfd;
+  }
+
+  .testimonials-header {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  .testimonials-header h2 {
+    font-size: 56px;
+    font-weight: 800;
+  }
+
+  .carousel-controls {
+    display: flex;
+    gap: 16px;
+  }
+
+  .control-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: #1a1a1a;
+  }
+
+  .control-btn.active {
+    background: var(--color-primary, #52BD94);
+    border-color: var(--color-primary, #52BD94);
+    color: white;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .testimonial-card {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid #eee;
+  }
+
+  .testimonial-card p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #4a4a4a;
+    margin-bottom: 32px;
+  }
+
+  .user-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .user-meta h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .user-meta span {
+    font-size: 14px;
+    color: #999;
+  }
+
+  @media (max-width: 992px) {
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .testimonials-header h2 { font-size: 36px; }
+  }
+</style>

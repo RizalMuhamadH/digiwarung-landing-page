@@ -1,0 +1,40 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/template-2/Header.astro";
+import Hero from "../../components/template-2/Hero.astro";
+import Tools from "../../components/template-2/Tools.astro";
+import AppSection from "../../components/template-2/AppSection.astro";
+import PeopleGrid from "../../components/template-2/PeopleGrid.astro";
+import Stats from "../../components/template-2/Stats.astro";
+import Testimonials from "../../components/template-2/Testimonials.astro";
+import Features from "../../components/template-2/Features.astro";
+import CTA from "../../components/template-2/CTA.astro";
+import Footer from "../../components/template-2/Footer.astro";
+---
+
+<Layout
+  title="DigiWarung - Teach students worldwide"
+  description="Amet nunc diam sed duis at sit diam arcu, nec. Eleifend proin massa nisl et viverra viverra lectus pulvinar."
+>
+  <Header />
+  <main>
+    <Hero />
+    <Tools />
+    <AppSection />
+    <PeopleGrid />
+    <Stats />
+    <Testimonials />
+    <Features />
+    <CTA />
+  </main>
+  <Footer />
+</Layout>
+
+<style is:global>
+  /* Template 2 Specific Overrides or Additions */
+  :root {
+    --color-primary: #52bd94;
+    --color-accent: #6d5bff;
+    --color-warning: #ffb352;
+  }
+</style>

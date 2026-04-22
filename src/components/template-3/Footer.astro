@@ -1,0 +1,154 @@
+---
+---
+
+<footer class="footer-3">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/template-3" class="logo">
+           <span class="logo-icon">P</span>
+           <span class="logo-text">Productly</span>
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">About Us</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal Stuff</h4>
+          <ul>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Financing</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-subscribe">
+        <h4>knowing you're always on the best energy deal</h4>
+        <form class="subscribe-form">
+          <input type="text" placeholder="Enter your phone number" />
+          <button type="submit" class="btn btn-orange">Sign up Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-3 {
+    padding: 100px 0 60px;
+    background: #fff;
+    border-top: 1px solid #eee;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.5fr;
+    gap: 60px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--color-orange, #FF9900);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 800;
+  }
+
+  .logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-col h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #1a1a1a;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-col li {
+    margin-bottom: 12px;
+  }
+
+  .footer-col a {
+    color: #4a4a4a;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s ease;
+  }
+
+  .footer-col a:hover {
+    color: var(--color-orange, #FF9900);
+  }
+
+  .footer-subscribe {
+    max-width: 350px;
+  }
+
+  .footer-subscribe h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.4;
+  }
+
+  .subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .subscribe-form input {
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+  }
+
+  .subscribe-form .btn-orange {
+    background: var(--color-orange, #FF9900);
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    font-weight: 700;
+  }
+
+  @media (max-width: 992px) {
+    .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+    .footer-links { grid-template-columns: 1fr 1fr; }
+  }
+</style>

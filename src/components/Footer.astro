@@ -1,0 +1,193 @@
+---
+import { ArrowRight } from "@lucide/astro";
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top flex">
+      <div class="footer-brand">
+        <a href="/" class="logo">DigiWarung</a>
+        <p>Get started now try our product</p>
+        <div class="newsletter-small">
+          <input type="email" placeholder="Enter your email" />
+          <button class="arrow-btn">
+            <ArrowRight class="h-5 w-5 text-white" />
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-links-grid grid">
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Product</a></li>
+            <li><a href="#pricing">FAQ</a></li>
+            <li><a href="#testimonials">Blog</a></li>
+          </ul>
+        </div>
+        <!-- <div class="footer-col">
+          <h4>Experience</h4>
+          <ul>
+            <li><a href="#benefits">About Us</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#features">Updates</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help centre</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Status</a></li>
+          </ul>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="footer-bottom flex">
+      <p>© 2026 DigiWarung Inc. Copyright and all rights reserved.</p>
+      <div class="legal-links">
+        <a href="#">Terms and Conditions</a>
+        <span>•</span>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #191a15;
+    color: white;
+    padding: 100px 0 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .footer-top {
+    justify-content: space-between;
+    margin-bottom: 80px;
+    gap: 60px;
+  }
+
+  .footer-brand {
+    flex: 1;
+    max-width: 300px;
+  }
+
+  .footer-brand .logo {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: 32px;
+    letter-spacing: -1px;
+  }
+
+  .footer-brand p {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 32px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .newsletter-small {
+    display: flex;
+    position: relative;
+    max-width: 320px;
+  }
+
+  .newsletter-small input {
+    width: 100%;
+    padding: 16px 24px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: var(--transition);
+  }
+
+  .newsletter-small input:focus {
+    border-color: var(--color-primary);
+  }
+
+  .arrow-btn {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    width: 44px;
+    height: 44px;
+    background: var(--color-primary);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: var(--transition);
+  }
+
+  .footer-links-grid {
+    flex: 2;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .footer-col h4 {
+    color: white;
+    margin-bottom: 24px;
+    font-size: 20px;
+  }
+
+  .footer-col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-col a {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+  }
+
+  .footer-col a:hover {
+    color: white;
+  }
+
+  .footer-bottom {
+    justify-content: space-between;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .legal-links {
+    display: flex;
+    gap: 16px;
+  }
+
+  .legal-links a {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  @media (max-width: 992px) {
+    .footer-top {
+      flex-direction: column;
+    }
+    .footer-links-grid {
+      grid-template-columns: 1fr;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+  }
+</style>

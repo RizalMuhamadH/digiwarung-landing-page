@@ -1,0 +1,111 @@
+---
+import { Image } from "astro:assets";
+import heroIllustration from "../../assets/template-3/hero-illustration.png";
+import { Play } from "@lucide/astro";
+---
+
+<section id="home" class="hero-3">
+  <div class="container flex-hero">
+    <div class="hero-content">
+      <h1 class="hero-title">The Design Thinking superpowers</h1>
+      <p class="hero-subtitle">
+        Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.
+      </p>
+      <div class="hero-cta">
+        <a href="#" class="btn btn-orange">Get started</a>
+        <a href="#" class="btn-watch">
+          <Play class="icon-play" />
+          Watch the Video
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <Image src={heroIllustration} alt="Design Thinking" class="hero-img" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-3 {
+    padding: 180px 0 100px;
+    background: #fff;
+  }
+
+  .flex-hero {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .hero-content {
+    flex: 1;
+  }
+
+  .hero-title {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin-bottom: 24px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    color: #4a4a4a;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 480px;
+  }
+
+  .hero-cta {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .btn-orange {
+    background: var(--color-orange, #FF9900);
+    color: white;
+    padding: 16px 40px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .btn-orange:hover {
+    background: #e68a00;
+  }
+
+  .btn-watch {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--color-orange, #FF9900);
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 18px;
+  }
+
+  .icon-play {
+    width: 24px;
+    height: 24px;
+    fill: var(--color-orange, #FF9900);
+  }
+
+  .hero-visual {
+    flex: 1.2;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 992px) {
+    .flex-hero { flex-direction: column; text-align: center; }
+    .hero-subtitle { margin-left: auto; margin-right: auto; }
+    .hero-cta { justify-content: center; }
+    .hero-3 { padding-top: 140px; }
+  }
+</style>

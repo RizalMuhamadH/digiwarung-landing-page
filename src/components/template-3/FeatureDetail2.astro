@@ -1,0 +1,118 @@
+---
+import { Image } from "astro:assets";
+import featureImg from "../../assets/template-3/feature-2.png";
+import { Check } from "@lucide/astro";
+---
+
+<section class="feature-detail section bg-light">
+  <div class="container flex-feature flex-reverse">
+    <div class="feature-content">
+      <span class="feature-label">Easier decision making for</span>
+      <h2>Product Managers</h2>
+      <p>The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person.</p>
+      
+      <ul class="check-list">
+        <li>
+          <div class="check-icon"><Check class="h-4 w-4" /></div>
+          <span>Never worry about overpaying for your energy again.</span>
+        </li>
+        <li>
+          <div class="check-icon"><Check class="h-4 w-4" /></div>
+          <span>We will only switch you to energy companies that we trust and will treat you right.</span>
+        </li>
+        <li>
+          <div class="check-icon"><Check class="h-4 w-4" /></div>
+          <span>We track the market daily and focus whenever savings are.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="feature-visual">
+      <Image src={featureImg} alt="Product Managers" class="feature-img" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .feature-detail {
+    padding: 100px 0;
+  }
+
+  .bg-light { background: #F9FBF9; }
+
+  .flex-feature {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .flex-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .feature-content {
+    flex: 1;
+  }
+
+  .feature-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4a4a4a;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .feature-content h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 24px;
+  }
+
+  .feature-content > p {
+    font-size: 18px;
+    color: #4a4a4a;
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+    font-size: 16px;
+    color: #4a4a4a;
+    line-height: 1.6;
+  }
+
+  .check-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--color-orange, #FF9900);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .feature-visual {
+    flex: 1;
+  }
+
+  .feature-img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 992px) {
+    .flex-feature { flex-direction: column; text-align: center; }
+  }
+</style>

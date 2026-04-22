@@ -1,0 +1,225 @@
+---
+import { Globe, ArrowUpRight } from "@lucide/astro";
+---
+
+<footer class="footer-2">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/template-2" class="logo">
+          <span class="logo-icon">D</span>
+          <span class="logo-text">DigiWarung</span>
+        </a>
+      </div>
+
+      <!-- <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#app">App</a></li>
+            <li><a href="#instructors">Instructors</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Experience</h4>
+          <ul>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Success Stories</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Developers</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Integrations</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Events</a></li>
+            <li>
+              <a href="#">Request Demo <ArrowUpRight class="icon-inline" /></a>
+            </li>
+          </ul>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="footer-bottom">
+      <div class="legal">
+        <span>DigiWarung @ 2026. All rights reserved.</span>
+        <!-- <div class="legal-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Contact</a>
+        </div> -->
+      </div>
+      <!-- <div class="footer-settings">
+        <div class="setting-item"><Globe class="h-4 w-4" /> EN</div>
+        <div class="setting-item">EUR</div>
+        <div class="setting-item">Accessibility</div>
+      </div> -->
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-2 {
+    background: #191a15;
+    color: white;
+    padding: 100px 0 40px;
+  }
+
+  .footer-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-bottom: 80px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--color-primary, #52bd94);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 800;
+  }
+
+  .logo-text {
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+  }
+
+  .footer-col h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: white;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-col li {
+    margin-bottom: 16px;
+  }
+
+  .footer-col a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .footer-col a:hover {
+    color: white;
+  }
+
+  .badge {
+    background: #6d5bff;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 800;
+    color: white;
+  }
+
+  .icon-inline {
+    width: 14px;
+    height: 14px;
+  }
+
+  .footer-bottom {
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .legal {
+    display: flex;
+    gap: 40px;
+  }
+
+  .legal-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .legal-links a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .footer-settings {
+    display: flex;
+    gap: 32px;
+  }
+
+  .setting-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 992px) {
+    .footer-links {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-bottom {
+      flex-direction: column;
+      gap: 32px;
+      text-align: center;
+    }
+    .legal {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+</style>

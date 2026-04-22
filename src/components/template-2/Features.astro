@@ -1,0 +1,156 @@
+---
+import { Image } from "astro:assets";
+import f1 from "../../assets/template-2/feature-1.png";
+import f2 from "../../assets/template-2/feature-2.png";
+---
+
+<section id="features" class="features-grid-section section">
+  <div class="container">
+    <div class="flex-features">
+      <div class="features-text">
+        <h2>All the cool <span class="text-underline">features</span></h2>
+        <p>Mauris consequat, cursus phasellus habitasse rhoncus quis odio ac. In et dolor eu non maecenas nulla. Cum sem nisl, sit pellentesque quisque feugiat nisi at eros egestas. Ultrices in amet, ullamcorper non mi erat s, neque acrt.</p>
+        <a href="#" class="view-all">View all the features &rarr;</a>
+      </div>
+
+      <div class="features-visual">
+         <div class="feature-main-card">
+           <div class="main-card-header">
+             <span class="badge">Practical</span>
+             <h3>Design for your people think</h3>
+             <p>Amet nunc diam sed duis at sit diam arcu, nec. Eleifend proin massa.</p>
+             <button class="btn-book">Book a lesson</button>
+           </div>
+           <div class="main-card-images">
+             <Image src={f1} alt="Feature" class="img-1" />
+             <Image src={f2} alt="Feature" class="img-2" />
+           </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .features-grid-section {
+    padding: 120px 0;
+  }
+
+  .flex-features {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .features-text {
+    flex: 1;
+  }
+
+  .features-text h2 {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 32px;
+  }
+
+  .text-underline {
+    position: relative;
+    display: inline-block;
+  }
+
+  .text-underline::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: rgba(82, 189, 148, 0.3);
+    z-index: -1;
+  }
+
+  .features-text p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+
+  .view-all {
+    font-weight: 700;
+    color: #6D5BFF;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .features-visual {
+    flex: 1.2;
+  }
+
+  .feature-main-card {
+    background: #FFB352;
+    border-radius: 40px;
+    padding: 60px;
+    display: flex;
+    gap: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .main-card-header {
+    flex: 1;
+    color: white;
+  }
+
+  .badge {
+    background: rgba(255,255,255,0.2);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+
+  .main-card-header h3 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .main-card-header p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 32px;
+  }
+
+  .btn-book {
+    background: white;
+    color: #1a1a1a;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .main-card-images {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .main-card-images img {
+    border-radius: 20px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+
+  @media (max-width: 992px) {
+    .flex-features { flex-direction: column; }
+    .feature-main-card { flex-direction: column; padding: 40px; }
+  }
+</style>

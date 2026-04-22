@@ -1,0 +1,175 @@
+---
+import { Image } from 'astro:assets';
+import benefitsImage from '../assets/benefits-image.png';
+import { Check } from "@lucide/astro";
+---
+<section id="benefits" class="benefits-section section">
+
+  <div class="container flex-benefits">
+    <div class="benefits-content">
+      <h2>What Benefit Will You Get</h2>
+      <ul class="benefits-list">
+        <li>
+          <span class="check-icon">
+            <Check class="h-4 w-4 text-white" />
+          </span>
+          Free Consulting With Expert Saving Money
+        </li>
+        <li>
+          <span class="check-icon">
+             <Check class="h-4 w-4 text-white" />
+          </span>
+          Online Banking
+        </li>
+        <li>
+          <span class="check-icon">
+             <Check class="h-4 w-4 text-white" />
+          </span>
+          Investment Report Every Month
+        </li>
+        <li>
+          <span class="check-icon">
+             <Check class="h-4 w-4 text-white" />
+          </span>
+          Saving Money For The Future
+        </li>
+        <li>
+          <span class="check-icon">
+             <Check class="h-4 w-4 text-white" />
+          </span>
+          Online Transaction
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="benefits-image">
+      <div class="image-container">
+        <Image src={benefitsImage} alt="Laptop workspace" class="benefit-img" />
+        <div class="benefit-card">
+          <div class="user-info">
+             <div class="avatar-placeholder"></div>
+             <div>
+               <p class="name">Amanda Young</p>
+               <p class="role">Expert Saving Money</p>
+             </div>
+          </div>
+          <div class="message-bubble">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#52BD94" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="money-card">
+          <p>Money Transfer Successful</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .flex-benefits {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .benefits-content {
+    flex: 1;
+  }
+
+  .benefits-content h2 {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 48px;
+    letter-spacing: -1px;
+  }
+
+  .benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .benefits-list li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-dark);
+  }
+
+  .check-icon {
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .benefits-image {
+    flex: 1;
+  }
+
+  .image-container {
+    position: relative;
+  }
+
+  .benefit-img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+  }
+
+  .benefit-card {
+    position: absolute;
+    top: 40px;
+    left: -40px;
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .user-info {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .avatar-placeholder {
+    width: 40px;
+    height: 40px;
+    background: #eee;
+    border-radius: 50%;
+  }
+
+  .user-info .name { font-weight: 700; margin: 0; }
+  .user-info .role { font-size: 12px; color: var(--color-text-muted); margin: 0; }
+
+  .money-card {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 992px) {
+    .flex-benefits { flex-direction: column; }
+    .benefit-card { left: 0; top: -20px; }
+  }
+</style>

@@ -1,0 +1,143 @@
+---
+import { Image } from "astro:assets";
+import blog1 from "../../assets/template-3/blog-1.png";
+---
+
+<section id="blog" class="marketing-strategies section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Marketing Strategies</h2>
+      <p>Join 40,000+ other marketers and get proven strategies on email marketing.</p>
+    </div>
+
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-img-wrapper">
+          <Image src={blog1} alt="Strategy" class="blog-img" />
+        </div>
+        <div class="blog-content">
+          <p class="blog-meta">By <strong>Abdullah</strong> | 03 March 2019</p>
+          <h3>Increasing Prosperity With Positive Thinking</h3>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-img-wrapper">
+          <Image src={blog1} alt="Strategy" class="blog-img" />
+        </div>
+        <div class="blog-content">
+          <p class="blog-meta">By <strong>Abdullah</strong> | 03 March 2019</p>
+          <h3 class="highlight-text">Motivation Is The First Step To Success</h3>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-img-wrapper">
+          <Image src={blog1} alt="Strategy" class="blog-img" />
+        </div>
+        <div class="blog-content">
+          <p class="blog-meta">By <strong>Abdullah</strong> | 03 March 2019</p>
+          <h3>Success Steps For Your Personal Or Business Life</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-dots">
+      <span class="dot"></span>
+      <span class="dot active"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .marketing-strategies {
+    padding: 100px 0;
+  }
+
+  .section-header {
+    margin-bottom: 60px;
+  }
+
+  .section-header h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+
+  .section-header p {
+    font-size: 18px;
+    color: #4a4a4a;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .blog-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+
+  .blog-card:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    transform: translateY(-5px);
+  }
+
+  .blog-img-wrapper {
+    height: 240px;
+    overflow: hidden;
+  }
+
+  .blog-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .blog-content {
+    padding: 24px;
+  }
+
+  .blog-meta {
+    font-size: 14px;
+    color: #4a4a4a;
+    margin-bottom: 12px;
+  }
+
+  .blog-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .highlight-text {
+    color: var(--color-orange, #FF9900);
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 60px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    background: #eee;
+    border-radius: 50%;
+  }
+
+  .dot.active {
+    background: var(--color-orange, #FF9900);
+  }
+
+  @media (max-width: 992px) {
+    .blog-grid { grid-template-columns: 1fr; }
+  }
+</style>

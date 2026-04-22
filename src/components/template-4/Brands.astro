@@ -1,0 +1,57 @@
+---
+---
+
+<section class="brands-section section">
+  <div class="container text-center">
+    <p class="brands-label">Trusted By Greatest Companies</p>
+    <div class="brands-grid">
+      <div class="brand-item">Google</div>
+      <div class="brand-item">airbnb</div>
+      <div class="brand-item">Creative MARKET</div>
+      <div class="brand-item">shopify</div>
+      <div class="brand-item">amazon</div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .brands-section {
+    padding: 60px 0;
+  }
+
+  .brands-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    opacity: 0.6;
+  }
+
+  .brands-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .brand-item {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1a1a1a;
+    opacity: 0.2;
+    transition: var(--transition);
+    cursor: default;
+  }
+
+  .brand-item:hover {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    .brands-grid { justify-content: center; }
+    .brand-item { font-size: 24px; }
+  }
+</style>

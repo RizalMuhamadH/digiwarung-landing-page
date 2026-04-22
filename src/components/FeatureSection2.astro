@@ -1,0 +1,162 @@
+---
+
+---
+
+<section id="features" class="features-you-get section">
+  <div class="container">
+    <div class="features-header flex">
+      <h2>Our Features<br />you can get</h2>
+      <p>
+        We offer a variety of interesting features that you can help increase
+        your productivity at work and manage your project easily.
+      </p>
+      <a href="#" class="btn btn-primary">Get Started</a>
+    </div>
+
+    <div class="features-cards grid">
+      <div class="feature-item-card">
+        <div class="card-image bg-light-green">
+          <!-- Representative SVG Illustration -->
+          <svg
+            width="200"
+            height="150"
+            viewBox="0 0 200 150"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect x="20" y="20" width="160" height="110" rx="12" fill="white"
+            ></rect>
+            <circle cx="50" cy="50" r="10" fill="#52BD94"></circle>
+            <rect x="70" y="45" width="80" height="10" rx="5" fill="#eee"
+            ></rect>
+            <rect x="50" y="75" width="100" height="10" rx="5" fill="#eee"
+            ></rect>
+            <rect x="50" y="95" width="60" height="10" rx="5" fill="#eee"
+            ></rect>
+          </svg>
+        </div>
+        <h3>Collaboration Teams</h3>
+        <p>Here you can handle projects together with team virtually.</p>
+      </div>
+
+      <div class="feature-item-card">
+        <div class="card-image bg-light-blue">
+          <svg
+            width="200"
+            height="150"
+            viewBox="0 0 200 150"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect x="30" y="30" width="140" height="90" rx="12" fill="white"
+            ></rect>
+            <path d="M70 60H130V90H70V60Z" fill="#6D5BFF" fill-opacity="0.1"
+            ></path>
+            <rect x="75" y="65" width="50" height="20" rx="4" fill="#6D5BFF"
+            ></rect>
+          </svg>
+        </div>
+        <h3>Cloud Storage</h3>
+        <p>No need to worry about storage because we provide up to 2 TB.</p>
+      </div>
+
+      <div class="feature-item-card">
+        <div class="card-image bg-light-yellow">
+          <svg
+            width="200"
+            height="150"
+            viewBox="0 0 200 150"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="100" cy="75" r="50" fill="white"></circle>
+            <path
+              d="M100 75L130 45"
+              stroke="#FFB352"
+              stroke-width="4"
+              stroke-linecap="round"></path>
+            <circle cx="100" cy="75" r="10" fill="#FFB352"></circle>
+          </svg>
+        </div>
+        <h3>Daily Analytics</h3>
+        <p>We always provide reliable information for daily updates for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .features-header {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+    gap: 40px;
+  }
+
+  .features-header h2 {
+    font-size: 56px;
+    font-weight: 800;
+    flex: 1.2;
+    letter-spacing: -1px;
+  }
+
+  .features-header p {
+    flex: 1;
+    font-size: 18px;
+    color: var(--color-text);
+    line-height: 1.8;
+  }
+
+  .features-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+  }
+
+  .feature-item-card h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 32px 0 16px;
+    letter-spacing: -0.5px;
+  }
+
+  .feature-item-card p {
+    font-size: 18px;
+    color: var(--color-text);
+    line-height: 1.6;
+  }
+
+  .card-image {
+    height: 360px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+
+  .feature-item-card:hover .card-image {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  }
+
+  .bg-light-green {
+    background-color: #f1fbf7;
+  }
+  .bg-light-blue {
+    background-color: #f5f4ff;
+  }
+  .bg-light-yellow {
+    background-color: #fff9f1;
+  }
+
+  @media (max-width: 992px) {
+    .features-header {
+      flex-direction: column;
+      text-align: center;
+    }
+    .features-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

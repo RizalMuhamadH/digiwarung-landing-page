@@ -1,0 +1,83 @@
+---
+import { Globe, Users, Smile } from "@lucide/astro";
+---
+
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-icon icon-yellow">
+          <Globe class="h-8 w-8" />
+        </div>
+        <h3>195</h3>
+        <p>user countries</p>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon icon-blue">
+          <Users class="h-8 w-8" />
+        </div>
+        <h3>1M</h3>
+        <p>valued teachers</p>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon icon-orange">
+          <Smile class="h-8 w-8" />
+        </div>
+        <h3>17M</h3>
+        <p>happy students</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .stats-section {
+    background: #191A15;
+    padding: 100px 0;
+    color: white;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .icon-yellow { background: rgba(255, 179, 82, 0.15); color: #FFB352; }
+  .icon-blue { background: rgba(109, 91, 255, 0.15); color: #6D5BFF; }
+  .icon-orange { background: rgba(255, 122, 0, 0.15); color: #FF7A00; }
+
+  .stat-item h3 {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+
+  .stat-item p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.6);
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .stats-grid { grid-template-columns: 1fr; gap: 60px; }
+    .stat-item h3 { font-size: 40px; }
+  }
+</style>

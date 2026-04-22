@@ -1,0 +1,193 @@
+---
+import { Image } from 'astro:assets';
+import avatars from '../assets/avatars.png';
+import { Quote, Play, Triangle } from "@lucide/astro";
+---
+<section id="testimonials" class="testimonials-section section">
+
+  <div class="container flex-testimonials">
+    <div class="testimonial-content">
+      <h2>People are Saying About DoWhith</h2>
+      <p>Everything you need to accept to payment and grow your money of manage anywhere on planet</p>
+      
+      <div class="quote-container">
+        <Quote class="h-10 w-10 text-primary opacity-20" />
+        <p class="quote-text">
+          I am very helped by this E-wallet application, my days are very easy to use this application and its very helpful in my life, even I can pay a short time 😍
+        </p>
+        <p class="author">Aria Zidany</p>
+        
+        <div class="author-avatars">
+           <div class="avatar active"></div>
+           <div class="avatar"></div>
+           <div class="avatar"></div>
+           <div class="avatar"></div>
+           <div class="play-btn">
+             <Play class="h-4 w-4 text-white fill-white" />
+           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-form-card">
+      <div class="form-header">
+        <div class="form-icon">
+          <Triangle class="h-8 w-8 text-white fill-white" />
+        </div>
+        <h3>Get Started</h3>
+      </div>
+
+      <form class="cta-form">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="Enter your email" />
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="What are you say?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Request Demo</button>
+        <p class="or-text">or <a href="#">Start Free Trial</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials-section {
+    background-color: #191A15;
+    color: white;
+  }
+
+  .flex-testimonials {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .testimonial-content {
+    flex: 1;
+  }
+
+  .testimonial-content h2 {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 24px;
+  }
+
+  .testimonial-content p {
+    color: rgba(255,255,255,0.6);
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .quote-text {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 24px 0;
+    line-height: 1.4;
+  }
+
+  .author {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+
+  .author-avatars {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #444;
+    border: 2px solid transparent;
+  }
+
+  .avatar.active {
+    border-color: var(--color-primary);
+  }
+
+  .play-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cta-form-card {
+    flex: 0.8;
+    background: #252620;
+    padding: 60px;
+    border-radius: 24px;
+    text-align: center;
+  }
+
+  .form-header {
+    margin-bottom: 40px;
+  }
+
+  .form-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--color-primary);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+  }
+
+  .cta-form {
+    text-align: left;
+  }
+
+  .form-group {
+    margin-bottom: 24px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .form-group input, 
+  .form-group textarea {
+    width: 100%;
+    padding: 16px;
+    background: #31322C;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-family: inherit;
+  }
+
+  .form-group textarea {
+    height: 120px;
+    resize: none;
+  }
+
+  .or-text {
+    text-align: center;
+    margin-top: 16px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .or-text a {
+    color: white;
+    font-weight: 600;
+  }
+
+  @media (max-width: 992px) {
+    .flex-testimonials { flex-direction: column; }
+    .cta-form-card { width: 100%; padding: 40px; }
+  }
+</style>

@@ -1,0 +1,116 @@
+---
+import { Image } from "astro:assets";
+import p1 from "../../assets/template-2/person-1.png";
+import p2 from "../../assets/template-2/person-2.png";
+import p3 from "../../assets/template-2/hero-student.png";
+import p4 from "../../assets/template-2/hero-teacher.png";
+---
+
+<section id="instructors" class="people-grid-section section">
+  <div class="container flex-people">
+    <div class="people-collage">
+      <div class="collage-grid">
+        <div class="collage-item item-1"><Image src={p1} alt="Person" /></div>
+        <div class="collage-item item-2"><Image src={p2} alt="Person" /></div>
+        <div class="collage-item item-3"><Image src={p3} alt="Person" /></div>
+        <div class="collage-item item-4"><Image src={p4} alt="Person" /></div>
+        <div class="collage-item item-5"><Image src={p1} alt="Person" /></div>
+        <div class="collage-item item-6"><Image src={p2} alt="Person" /></div>
+        <div class="collage-item item-7"><Image src={p3} alt="Person" /></div>
+        <div class="collage-item item-8"><Image src={p4} alt="Person" /></div>
+        <div class="collage-item item-9"><Image src={p1} alt="Person" /></div>
+      </div>
+    </div>
+
+    <div class="people-info">
+      <div class="accent-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 5L25 15H35L27 22L30 32L20 27L10 32L13 22L5 15H15L20 5Z" stroke="#FFB352" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h2>Meet international students & teachers</h2>
+      <p>Morbi sit amet ex dignissim pharetra sed amet. Tempus justo senectus risus ac elit velit, nunc. Eget commodo eget in aliquam. Facilisi lectus nec magna hendrerit. Placerat ipsum sit tellus orci, facilisis lacus amet enim faucibus integer.</p>
+      <a href="#" class="explore-link">Explore teachers and students &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .people-grid-section {
+    padding: 120px 0;
+    background: #fff;
+  }
+
+  .flex-people {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .people-collage {
+    flex: 1.2;
+  }
+
+  .collage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .collage-item {
+    border-radius: 15px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  }
+
+  .collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+  }
+
+  .collage-item:hover img {
+    transform: scale(1.1);
+  }
+
+  .item-2, .item-5, .item-8 {
+    transform: translateY(40px);
+  }
+
+  .people-info {
+    flex: 1;
+  }
+
+  .accent-icon {
+    margin-bottom: 32px;
+  }
+
+  .people-info h2 {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 32px;
+    color: #1a1a1a;
+    line-height: 1.1;
+  }
+
+  .people-info p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+
+  .explore-link {
+    font-weight: 700;
+    color: #6D5BFF;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  @media (max-width: 992px) {
+    .flex-people { flex-direction: column-reverse; }
+    .item-2, .item-5, .item-8 { transform: none; }
+  }
+</style>

@@ -1,0 +1,31 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/template-4/Header.astro";
+import Hero from "../../components/template-4/Hero.astro";
+import Brands from "../../components/template-4/Brands.astro";
+import Portfolio from "../../components/template-4/Portfolio.astro";
+import Testimonials from "../../components/template-4/Testimonials.astro";
+import Services from "../../components/template-4/Services.astro";
+import Footer from "../../components/template-4/Footer.astro";
+---
+
+<Layout 
+  title="Power. - We Design Impactful Digital Products" 
+  description="Help find solutions with intuitive and in accordance with client business goals. we provide a high-quality services."
+>
+  <Header />
+  <main>
+    <Hero />
+    <Brands />
+    <Portfolio />
+    <Testimonials />
+    <Services />
+  </main>
+  <Footer />
+</Layout>
+
+<style is:global>
+  :root {
+    --color-purple: #6D5BFF;
+  }
+</style>

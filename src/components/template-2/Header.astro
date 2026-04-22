@@ -1,0 +1,230 @@
+---
+import { Search, ChevronDown, Menu, X } from "@lucide/astro";
+---
+
+<header class="header">
+  <div class="container flex-header">
+    <div class="logo">
+      <a href="/template-2">
+        <span class="logo-icon">D</span>
+        <span class="logo-text">DigiWarung</span>
+      </a>
+    </div>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#app">App</a></li>
+        <li><a href="#instructors">Instructors</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#features">Features</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#" class="btn-login">Log in</a>
+      <a href="#" class="btn btn-outline">Sign Up free</a>
+    </div>
+
+    <button class="mobile-toggle" id="mobile-toggle-2">
+      <Menu id="menu-icon" />
+      <X id="close-icon" class="hidden" />
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu-2">
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#app">App</a></li>
+        <li><a href="#instructors">Instructors</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#features">Features</a></li>
+      </ul>
+      <div class="mobile-actions">
+        <a href="#" class="btn-login">Log in</a>
+        <a href="#" class="btn btn-primary">Sign Up free</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById("mobile-toggle-2");
+  const menu = document.getElementById("mobile-menu-2");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
+
+  toggle?.addEventListener("click", () => {
+    menu?.classList.toggle("active");
+    menuIcon?.classList.toggle("hidden");
+    closeIcon?.classList.toggle("hidden");
+  });
+</script>
+
+<style>
+  .header {
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+  }
+
+  .flex-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--color-primary, #52bd94);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 20px;
+  }
+
+  .logo-text {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1a1a1a;
+  }
+
+  .nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav a {
+    color: #4a4a4a;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+
+  .nav a:hover {
+    color: #1a1a1a;
+  }
+
+  .icon-sm {
+    width: 16px;
+    height: 16px;
+    opacity: 0.5;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .btn-login {
+    color: #4a4a4a;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .btn-outline {
+    padding: 10px 24px;
+    border: 1px solid #1a1a1a;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+
+  .btn-outline:hover {
+    background: #1a1a1a;
+    color: white;
+  }
+
+  .mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1a1a1a;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 73px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 40px 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: 0.3s ease;
+    z-index: 999;
+  }
+
+  .mobile-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 32px;
+  }
+
+  .mobile-menu li {
+    margin-bottom: 24px;
+  }
+
+  .mobile-menu a {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  .mobile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  @media (max-width: 992px) {
+    .nav,
+    .header-actions {
+      display: none;
+    }
+    .mobile-toggle {
+      display: block;
+    }
+  }
+</style>

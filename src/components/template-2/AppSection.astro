@@ -1,0 +1,240 @@
+---
+import { Image } from "astro:assets";
+import appPreviewImg from "../../assets/template-2/app-preview.png";
+import { Check, Play } from "@lucide/astro";
+---
+
+<section id="app" class="app-section section">
+  <div class="container flex-app">
+    <div class="app-info">
+      <h2>An <span class="text-highlight">all-in-one</span> app that makes it easier</h2>
+      <ul class="benefit-list">
+        <li>
+          <div class="check-icon"><Check class="h-4 w-4" /></div>
+          <span>Curabitur et pharetra magna adipiscing eros lorem aliquam.</span>
+        </li>
+        <li>
+          <div class="check-icon"><Check class="h-4 w-4" /></div>
+          <span>Tellus arcu sed consequat ac nisl ut ac blandit.</span>
+        </li>
+        <li>
+          <div class="check-icon"><Check class="h-4 w-4" /></div>
+          <span>Ultrices nisl ornare mi elit egestas diam orci.</span>
+        </li>
+      </ul>
+      <a href="#" class="find-more">Find more about the app &rarr;</a>
+    </div>
+
+    <div class="app-visual">
+      <div class="tablet-wrapper">
+        <Image src={appPreviewImg} alt="App Preview" class="tablet-img" />
+        <div class="video-overlay">
+          <button class="play-btn-large">
+            <Play class="h-10 w-10 fill-white" />
+          </button>
+        </div>
+      </div>
+      
+      <!-- Floating cards -->
+      <div class="floating-benefit-card card-1">
+        <span class="category">Courses</span>
+        <h3>The major of mathematics</h3>
+        <p>Amet nunc diam sed duis at sit diam arcu, nec. Eleifend proin massa.</p>
+        <button class="btn-sm">Book a lesson</button>
+      </div>
+
+      <div class="floating-benefit-card card-2">
+        <span class="category">Practical</span>
+        <h3>Energy for you power plant</h3>
+        <p>Amet nunc diam sed duis at sit diam arcu, nec. Eleifend proin massa.</p>
+        <button class="btn-sm">Book a lesson</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .app-section {
+    padding: 120px 0;
+  }
+
+  .flex-app {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .app-info {
+    flex: 1;
+  }
+
+  .app-info h2 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 32px;
+    color: #1a1a1a;
+  }
+
+  .text-highlight {
+    color: #FFB352;
+    position: relative;
+    display: inline-block;
+  }
+
+  .text-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #FFB352;
+  }
+
+  .benefit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px;
+  }
+
+  .benefit-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #4a4a4a;
+    line-height: 1.5;
+  }
+
+  .check-icon {
+    width: 24px;
+    height: 24px;
+    background: #F5F4FF;
+    color: #6D5BFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .find-more {
+    font-weight: 700;
+    color: #6D5BFF;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .app-visual {
+    flex: 1.2;
+    position: relative;
+  }
+
+  .tablet-wrapper {
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+  }
+
+  .tablet-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .play-btn-large {
+    width: 100px;
+    height: 100px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(20px);
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .play-btn-large:hover {
+    transform: scale(1.1);
+    background: rgba(255,255,255,0.4);
+  }
+
+  .floating-benefit-card {
+    position: absolute;
+    width: 260px;
+    background: white;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    z-index: 2;
+  }
+
+  .category {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #6D5BFF;
+    background: #F5F4FF;
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+    display: inline-block;
+  }
+
+  .floating-benefit-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .floating-benefit-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  .btn-sm {
+    width: 100%;
+    padding: 10px;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .card-1 {
+    top: -40px;
+    right: -20px;
+  }
+
+  .card-2 {
+    bottom: -40px;
+    left: -20px;
+  }
+
+  @media (max-width: 992px) {
+    .flex-app { flex-direction: column; }
+    .app-visual { margin-top: 80px; }
+    .floating-benefit-card { position: relative; top: 0; left: 0; right: 0; width: 100%; margin-top: 20px; }
+  }
+</style>

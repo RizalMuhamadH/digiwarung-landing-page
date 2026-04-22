@@ -1,0 +1,165 @@
+---
+
+---
+
+<footer class="footer-4">
+  <div class="container">
+    <div class="footer-top">
+      <div class="logo">
+        <a href="/template-4">
+          <span class="logo-text">Power<span class="dot">.</span></span>
+        </a>
+      </div>
+      <div class="social-links">
+        <a href="#" class="social-icon" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="Linkedin">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-middle">
+      <div class="footer-links-row">
+        <div class="link-group">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Investors</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-cta-col">
+        <a href="#" class="btn btn-purple">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom text-center">
+      <p>© power 2021 - All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-4 {
+    background: #191e33;
+    color: white;
+    padding: 80px 0 40px;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 60px;
+  }
+
+  .logo-text {
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+  }
+
+  .dot {
+    color: #6d5bff;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 16px;
+  }
+
+  .social-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: var(--transition);
+  }
+
+  .social-icon:hover {
+    background: #6d5bff;
+    transform: translateY(-3px);
+  }
+
+  .footer-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 80px;
+  }
+
+  .link-group h4 {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .link-group ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .link-group a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+
+  .link-group a:hover {
+    color: white;
+  }
+
+  .btn-purple {
+    background: #6d5bff;
+    color: white;
+    padding: 16px 40px;
+    border-radius: 12px;
+    font-weight: 700;
+  }
+
+  .footer-bottom {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 40px;
+  }
+
+  @media (max-width: 768px) {
+    .footer-top {
+      flex-direction: column;
+      gap: 32px;
+      text-align: center;
+    }
+    .footer-middle {
+      flex-direction: column;
+      gap: 40px;
+      text-align: center;
+      align-items: center;
+    }
+    .link-group ul {
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+</style>

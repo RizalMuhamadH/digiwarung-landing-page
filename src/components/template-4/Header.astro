@@ -1,0 +1,172 @@
+---
+import { Menu, X } from "@lucide/astro";
+---
+
+<header class="header-4">
+  <div class="container flex-header">
+    <div class="logo">
+      <a href="/template-4">
+        <span class="logo-text">Power<span class="dot">.</span></span>
+      </a>
+    </div>
+    
+    <nav class="nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#portfolio">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Products</a></li>
+      </ul>
+    </nav>
+
+    <button class="mobile-toggle" id="mobile-toggle-4">
+      <Menu id="menu-icon" />
+      <X id="close-icon" class="hidden" />
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu-4">
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#portfolio">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Products</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById("mobile-toggle-4");
+  const menu = document.getElementById("mobile-menu-4");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
+
+  toggle?.addEventListener("click", () => {
+    menu?.classList.toggle("active");
+    menuIcon?.classList.toggle("hidden");
+    closeIcon?.classList.toggle("hidden");
+  });
+
+  // Close menu when clicking a link
+  const links = document.querySelectorAll("#mobile-menu-4 a");
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      menu?.classList.remove("active");
+      menuIcon?.classList.remove("hidden");
+      closeIcon?.classList.add("hidden");
+    });
+  });
+</script>
+
+<style>
+  .header-4 {
+    padding: 30px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+  }
+
+  .flex-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo a {
+    text-decoration: none;
+  }
+
+  .logo-text {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a1a1a;
+  }
+
+  .dot {
+    color: #6D5BFF;
+  }
+
+  .nav ul {
+    display: flex;
+    gap: 48px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav a {
+    color: #1a1a1a;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 16px;
+  }
+
+  .nav a:hover {
+    color: #6D5BFF;
+  }
+
+  .mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1a1a1a;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 88px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 40px 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: 0.3s ease;
+    z-index: 999;
+  }
+
+  .mobile-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-menu li {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .mobile-menu a {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  @media (max-width: 992px) {
+    .nav {
+      display: none;
+    }
+    .mobile-toggle {
+      display: block;
+    }
+  }
+</style>

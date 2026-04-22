@@ -1,0 +1,114 @@
+---
+import { MousePointer2, ClipboardList, Heart, Clock } from "@lucide/astro";
+---
+
+<section id="services" class="services-3 section">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>We design tools to unveil your superpowers</h2>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon icon-purple">
+          <MousePointer2 class="h-6 w-6" />
+        </div>
+        <h3>First click tests</h3>
+        <p>While most people enjoy casino gambling.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon icon-yellow">
+          <ClipboardList class="h-6 w-6" />
+        </div>
+        <h3>Design surveys</h3>
+        <p>Sports betting, lottery and bingo playing for the fun.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon icon-red">
+          <Heart class="h-6 w-6" />
+        </div>
+        <h3>Preference tests</h3>
+        <p>The Myspace page defines the individual.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon icon-blue">
+          <Clock class="h-6 w-6" />
+        </div>
+        <h3>Five second tests</h3>
+        <p>Personal choices and the overall personality.</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-60">
+      <a href="#" class="btn btn-orange">SIGN UP NOW</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services-3 {
+    background: #fff;
+    padding: 100px 0;
+  }
+
+  .section-header h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 80px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  .service-card {
+    text-align: left;
+  }
+
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  }
+
+  .icon-purple { background: #7752BE; }
+  .icon-yellow { background: #FAB005; }
+  .icon-red { background: #F03E3E; }
+  .icon-blue { background: #228BE6; }
+
+  .service-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .service-card p {
+    font-size: 16px;
+    color: #4a4a4a;
+    line-height: 1.6;
+  }
+
+  .mt-60 { margin-top: 60px; }
+
+  @media (max-width: 992px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 576px) {
+    .services-grid { grid-template-columns: 1fr; }
+  }
+</style>

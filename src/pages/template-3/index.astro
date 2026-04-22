@@ -1,0 +1,35 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/template-3/Header.astro";
+import Hero from "../../components/template-3/Hero.astro";
+import Services from "../../components/template-3/Services.astro";
+import FeatureDetail1 from "../../components/template-3/FeatureDetail1.astro";
+import FeatureDetail2 from "../../components/template-3/FeatureDetail2.astro";
+import FeatureDetail3 from "../../components/template-3/FeatureDetail3.astro";
+import ExpertCTA from "../../components/template-3/ExpertCTA.astro";
+import MarketingStrategies from "../../components/template-3/MarketingStrategies.astro";
+import Footer from "../../components/template-3/Footer.astro";
+---
+
+<Layout 
+  title="Productly - The Design Thinking superpowers" 
+  description="Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience."
+>
+  <Header />
+  <main>
+    <Hero />
+    <Services />
+    <FeatureDetail1 />
+    <FeatureDetail2 />
+    <FeatureDetail3 />
+    <ExpertCTA />
+    <MarketingStrategies />
+  </main>
+  <Footer />
+</Layout>
+
+<style is:global>
+  :root {
+    --color-orange: #FF9900;
+  }
+</style>

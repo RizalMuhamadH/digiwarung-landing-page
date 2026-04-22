@@ -1,0 +1,154 @@
+---
+import { Layout, Palette, Smartphone, Globe } from "@lucide/astro";
+---
+
+<section id="services" class="services-4 section">
+  <div class="container">
+    <div class="services-wrapper">
+      <div class="services-left">
+        <h2>How We Can Help You</h2>
+        <p>Follow our newsletter. We will regularly update our latest project and availability.</p>
+        
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email address" />
+          <button type="submit" class="btn btn-purple">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="services-right">
+        <div class="service-grid-item">
+           <div class="service-icon"><Layout class="h-6 w-6" /></div>
+           <div class="service-text">
+             <h4>UI/UX Design</h4>
+             <p>Sometimes features require a short description.</p>
+           </div>
+        </div>
+
+        <div class="service-grid-item">
+           <div class="service-icon"><Palette class="h-6 w-6" /></div>
+           <div class="service-text">
+             <h4>Logo Branding</h4>
+             <p>Sometimes features require a short description.</p>
+           </div>
+        </div>
+
+        <div class="service-grid-item">
+           <div class="service-icon"><Smartphone class="h-6 w-6" /></div>
+           <div class="service-text">
+             <h4>App Design</h4>
+             <p>Sometimes features require a short description.</p>
+           </div>
+        </div>
+
+        <div class="service-grid-item">
+           <div class="service-icon"><Globe class="h-6 w-6" /></div>
+           <div class="service-text">
+             <h4>Website Design</h4>
+             <p>Sometimes features require a short description.</p>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services-4 {
+    padding: 100px 0;
+    background: #fff;
+  }
+
+  .services-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .services-left {
+    flex: 1;
+  }
+
+  .services-left h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 24px;
+  }
+
+  .services-left p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 400px;
+  }
+
+  .newsletter-form {
+    display: flex;
+    background: #F9FBF9;
+    padding: 10px;
+    border-radius: 16px;
+    border: 1px solid #eee;
+  }
+
+  .newsletter-form input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    font-size: 16px;
+  }
+
+  .btn-purple {
+    background: #6D5BFF;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 700;
+  }
+
+  .services-right {
+    flex: 1.2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .service-grid-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    background: #F5F4FF;
+    color: #6D5BFF;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .service-text h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .service-text p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 992px) {
+    .services-wrapper { flex-direction: column; gap: 60px; text-align: center; }
+    .services-left p { margin-left: auto; margin-right: auto; }
+    .newsletter-form { max-width: 500px; margin: 0 auto; }
+  }
+
+  @media (max-width: 576px) {
+    .services-right { grid-template-columns: 1fr; }
+  }
+</style>

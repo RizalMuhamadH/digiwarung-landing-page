@@ -1,0 +1,203 @@
+---
+---
+<section id="pricing" class="pricing-section section text-center">
+
+  <div class="container">
+    <h2>Choose Plan<br>That's Right For You</h2>
+    <p class="subtitle">Choose plan that works best for you, feel free to contact us</p>
+    
+    <div class="billing-toggle">
+      <button class="active">Bill Monthly</button>
+      <button>Bill Yearly</button>
+    </div>
+
+    <div class="pricing-cards grid">
+      <!-- Free Plan -->
+      <div class="pricing-card">
+        <div class="card-header">
+          <h3>Free</h3>
+          <p>Have a go and test your superpowers</p>
+        </div>
+        <div class="price">
+          <span class="currency">$</span>
+          <span class="amount">0</span>
+        </div>
+        <ul class="plan-features">
+          <li>2 Users</li>
+          <li>2 GB Storage</li>
+          <li>Public Share & Comments</li>
+          <li>Chat Support</li>
+          <li>New income apps</li>
+        </ul>
+        <a href="#" class="btn btn-outline btn-full">Signup for free</a>
+      </div>
+
+      <!-- Pro Plan -->
+      <div class="pricing-card active">
+        <div class="card-header">
+          <h3>Pro</h3>
+          <p>Experiment the power of infinite possibilities</p>
+        </div>
+        <div class="price">
+          <span class="currency">$</span>
+          <span class="amount">8</span>
+          <span class="save-badge">Save $50 a year</span>
+        </div>
+        <ul class="plan-features">
+          <li>4 Users</li>
+          <li>All Apps</li>
+          <li>Unlimited internal reports</li>
+          <li>Premium support</li>
+          <li>All incoming apps</li>
+        </ul>
+        <a href="#" class="btn btn-primary btn-full">Go to pro</a>
+      </div>
+
+      <!-- Business Plan -->
+      <div class="pricing-card">
+        <div class="card-header">
+          <h3>Business</h3>
+          <p>Unleash your superpowers and join the Design League</p>
+        </div>
+        <div class="price">
+          <span class="currency">$</span>
+          <span class="amount">16</span>
+        </div>
+        <ul class="plan-features">
+          <li>All the features of pro plan</li>
+          <li>Account success Manager</li>
+          <li>Single Sign-On (SSO)</li>
+          <li>Co-conception program</li>
+          <li>Collaboration-Town</li>
+        </ul>
+        <a href="#" class="btn btn-outline btn-full">Goto Business</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  h2 { font-size: 50px; margin-bottom: 16px; }
+  .subtitle { font-size: 18px; color: var(--color-text-muted); margin-bottom: 40px; }
+
+  .billing-toggle {
+    background: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    display: inline-flex;
+    padding: 8px;
+    border-radius: 50px;
+    margin-bottom: 60px;
+  }
+
+  .billing-toggle button {
+    padding: 10px 30px;
+    background: transparent;
+    border-radius: 50px;
+    font-weight: 600;
+  }
+
+  .billing-toggle button.active {
+    background: var(--color-primary);
+    color: white;
+  }
+
+  .pricing-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .pricing-card {
+    background: white;
+    padding: 60px 40px;
+    border-radius: 40px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid #eee;
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+  }
+
+  .pricing-card.active {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    transform: scale(1.1);
+    z-index: 10;
+  }
+
+  .pricing-card.active h3, 
+  .pricing-card.active .price,
+  .pricing-card.active p {
+    color: white;
+  }
+
+  .pricing-card.active .btn-primary {
+    background: white;
+    color: var(--color-primary);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .pricing-card h3 { font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+  .pricing-card p { font-size: 16px; color: var(--color-text-muted); margin-bottom: 32px; }
+
+  .price {
+    font-size: 64px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .currency { font-size: 28px; margin-top: 15px; margin-right: 4px; font-weight: 600; }
+
+  .save-badge {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.2);
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 50px;
+  }
+
+  .plan-features {
+    text-align: left;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .plan-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+  }
+
+  .plan-features li::before {
+    content: '●';
+    color: var(--color-primary);
+    font-size: 14px;
+  }
+
+  .pricing-card.active .plan-features li::before {
+    color: white;
+  }
+
+  .btn-full { width: 100%; }
+
+  @media (max-width: 992px) {
+    .pricing-cards { grid-template-columns: 1fr; }
+    .pricing-card.active { transform: scale(1); }
+  }
+</style>

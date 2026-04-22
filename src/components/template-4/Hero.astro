@@ -1,0 +1,263 @@
+---
+import { Image } from "astro:assets";
+import heroWoman from "../../assets/template-4/hero-woman.png";
+import { Play, Star } from "@lucide/astro";
+---
+
+<section id="home" class="hero-4">
+  <div class="container flex-hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        We Design Impactful Digital <span class="text-box">Products</span>
+      </h1>
+      <p class="hero-subtitle">
+        Help find solutions with intuitive and in accordance with client business goals. we provide a high-quality services.
+      </p>
+      <div class="hero-cta">
+        <a href="#" class="btn btn-purple">Contact Us</a>
+        <a href="#" class="btn-video">
+          <div class="play-icon-small">
+            <Play class="h-4 w-4 fill-purple" />
+          </div>
+          Watch our introduction video
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="woman-frame">
+        <div class="circle-bg"></div>
+        <Image src={heroWoman} alt="Digital Design" class="hero-woman-img" />
+        
+        <!-- Floating Tool Icons -->
+        <div class="tool-icon tool-figma">
+           <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" />
+        </div>
+        <div class="tool-icon tool-xd">
+           <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg" alt="Adobe XD" />
+        </div>
+        <div class="tool-icon tool-sketch">
+           <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Sketch_Logo.svg" alt="Sketch" />
+        </div>
+
+        <!-- Stats Badge -->
+        <div class="stats-badge">
+           <div class="avatar-group">
+              <span class="mini-av"></span>
+              <span class="mini-av"></span>
+              <span class="mini-av"></span>
+           </div>
+           <div class="stats-info">
+              <h4>120+ Employees</h4>
+              <div class="rating">
+                 <Star class="h-3 w-3 fill-yellow text-yellow" />
+                 <span>5.0 (3.2k Reviews)</span>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-4 {
+    padding: 160px 0 100px;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .flex-hero {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .hero-content {
+    flex: 1;
+  }
+
+  .hero-title {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #1a1a1a;
+    margin-bottom: 32px;
+  }
+
+  .text-box {
+    color: #6D5BFF;
+    border: 3px solid #6D5BFF;
+    padding: 0 15px;
+    border-radius: 12px;
+    display: inline-block;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 48px;
+    max-width: 500px;
+  }
+
+  .hero-cta {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .btn-purple {
+    background: #6D5BFF;
+    color: white;
+    padding: 18px 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 18px;
+    box-shadow: 0 20px 40px rgba(109, 91, 255, 0.3);
+  }
+
+  .btn-purple:hover {
+    background: #5a49e0;
+    transform: translateY(-2px);
+  }
+
+  .btn-video {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #1a1a1a;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .play-icon-small {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fill-purple {
+    fill: #6D5BFF;
+    color: #6D5BFF;
+  }
+
+  .hero-visual {
+    flex: 1;
+    position: relative;
+  }
+
+  .woman-frame {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+  }
+
+  .circle-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: #F5F4FF;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .hero-woman-img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .tool-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 3;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .tool-figma { top: 10%; right: -20px; animation-delay: 1s; }
+  .tool-xd { top: 10%; left: -20px; animation-delay: 2s; }
+  .tool-sketch { bottom: 20%; right: -30px; animation-delay: 3s; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  .stats-badge {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .avatar-group {
+    display: flex;
+  }
+
+  .mini-av {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ddd;
+    border: 2px solid white;
+    margin-left: -12px;
+  }
+
+  .mini-av:first-child { margin-left: 0; background: #FF9900; }
+  .mini-av:nth-child(2) { background: #6D5BFF; }
+  .mini-av:nth-child(3) { background: #52BD94; }
+
+  .stats-info h4 {
+    font-size: 16px;
+    margin: 0 0 4px;
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #666;
+    font-weight: 600;
+  }
+
+  .fill-yellow { fill: #FAB005; }
+  .text-yellow { color: #FAB005; }
+
+  @media (max-width: 992px) {
+    .flex-hero { flex-direction: column; text-align: center; }
+    .hero-title { font-size: 48px; }
+    .hero-subtitle { margin: 0 auto 40px; }
+    .hero-cta { justify-content: center; }
+    .woman-frame { width: 320px; height: 320px; margin-top: 60px; }
+    .tool-icon { width: 48px; height: 48px; }
+  }
+</style>

@@ -1,0 +1,141 @@
+---
+import { Image } from "astro:assets";
+import av1 from "../../assets/template-4/avatar-1.png";
+import av2 from "../../assets/template-4/avatar-2.png";
+import av3 from "../../assets/template-4/avatar-3.png";
+import { Quote } from "@lucide/astro";
+---
+
+<section class="testimonials-4 section">
+  <div class="container text-center">
+    <div class="testimonial-header">
+       <h2>Let’s Hear What They Says</h2>
+    </div>
+
+    <div class="testimonial-content">
+      <div class="quote-icon top"><Quote class="h-12 w-12" /></div>
+      <p class="quote-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus vel, lobortis tincidunt fames quisque mauris at diam, nullam morbi pium rurpit amet id posuere tano quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+      </p>
+      <div class="quote-icon bottom"><Quote class="h-12 w-12" /></div>
+    </div>
+
+    <div class="testimonial-author">
+      <div class="author-avatars">
+        <Image src={av1} alt="Author" class="av-mini" />
+        <Image src={av2} alt="Author" class="av-mini" />
+        <Image src={av3} alt="Author" class="av-main" />
+        <Image src={av1} alt="Author" class="av-mini" />
+        <Image src={av2} alt="Author" class="av-mini" />
+      </div>
+      <div class="author-info">
+        <h3>Ricky Aprilia</h3>
+        <p>Founder of Varibo</p>
+      </div>
+    </div>
+
+    <!-- Decorative pattern dots -->
+    <div class="dots-pattern top-left"></div>
+    <div class="dots-pattern bottom-right"></div>
+  </div>
+</section>
+
+<style>
+  .testimonials-4 {
+    padding: 120px 0;
+    position: relative;
+    background: #fff;
+  }
+
+  .testimonial-header h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 60px;
+  }
+
+  .testimonial-content {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    position: relative;
+    padding: 40px 0;
+  }
+
+  .quote-text {
+    font-size: 24px;
+    line-height: 1.6;
+    color: #1a1a1a;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+  }
+
+  .quote-icon {
+    position: absolute;
+    color: #6D5BFF;
+    opacity: 0.1;
+    z-index: 1;
+  }
+
+  .quote-icon.top { top: 0; left: -40px; transform: rotate(180deg); }
+  .quote-icon.bottom { bottom: 0; right: -40px; }
+
+  .testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .author-avatars {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .av-mini {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    opacity: 0.4;
+    object-fit: cover;
+  }
+
+  .av-main {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid #6D5BFF;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(109, 91, 255, 0.2);
+  }
+
+  .author-info h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .author-info p {
+    font-size: 14px;
+    color: #666;
+    font-weight: 600;
+  }
+
+  .dots-pattern {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: radial-gradient(#6D5BFF 2px, transparent 2px);
+    background-size: 12px 12px;
+    opacity: 0.2;
+  }
+
+  .top-left { top: 100px; left: 100px; }
+  .bottom-right { bottom: 100px; right: 100px; }
+
+  @media (max-width: 768px) {
+    .quote-text { font-size: 18px; }
+    .top-left, .bottom-right { display: none; }
+    .quote-icon { display: none; }
+  }
+</style>

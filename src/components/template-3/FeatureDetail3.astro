@@ -1,0 +1,101 @@
+---
+import { Image } from "astro:assets";
+import featureImg from "../../assets/template-3/feature-3.png";
+---
+
+<section class="feature-detail section">
+  <div class="container flex-feature">
+    <div class="feature-content">
+      <span class="feature-label">Optimization for</span>
+      <h2>Marketers</h2>
+      <p>Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior.</p>
+      
+      <div class="feature-list">
+        <div class="list-item">
+          <h4>Accessory makers</h4>
+          <p>While most people enjoy casino gambling, sports betting, lottery and bingo playing for the fun.</p>
+        </div>
+        <div class="list-item">
+          <h4>Alterations</h4>
+          <p>If you are looking for a new way to promote your business that won't cost you more money.</p>
+        </div>
+        <div class="list-item">
+          <h4>Custom design designers</h4>
+          <p>If you are looking for a new way to promote your business that won't cost you more money.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-visual">
+      <Image src={featureImg} alt="Marketers" class="feature-img" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .feature-detail {
+    padding: 100px 0;
+  }
+
+  .flex-feature {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .feature-content {
+    flex: 1;
+  }
+
+  .feature-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4a4a4a;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .feature-content h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 24px;
+  }
+
+  .feature-content > p {
+    font-size: 18px;
+    color: #4a4a4a;
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+
+  .feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .list-item h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .list-item p {
+    font-size: 16px;
+    color: #4a4a4a;
+    line-height: 1.6;
+  }
+
+  .feature-visual {
+    flex: 1;
+  }
+
+  .feature-img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 992px) {
+    .flex-feature { flex-direction: column; text-align: center; }
+  }
+</style>

@@ -1,0 +1,222 @@
+---
+import { Menu, X } from "@lucide/astro";
+---
+
+<header class="header-3">
+  <div class="container flex-header">
+    <div class="logo">
+      <a href="/template-3">
+        <span class="logo-icon">P</span>
+        <span class="logo-text">Productly</span>
+      </a>
+    </div>
+    
+    <nav class="nav">
+      <ul>
+        <li><a href="#home">Product</a></li>
+        <li><a href="#services">Customers</a></li>
+        <li><a href="#expert">Pricing</a></li>
+        <li><a href="#blog">Resources</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#" class="btn-signin">Sign In</a>
+      <a href="#" class="btn btn-primary">Sign Up</a>
+    </div>
+
+    <button class="mobile-toggle" id="mobile-toggle-3">
+      <Menu id="menu-icon" />
+      <X id="close-icon" class="hidden" />
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu-3">
+    <nav>
+      <ul>
+        <li><a href="#home">Product</a></li>
+        <li><a href="#services">Customers</a></li>
+        <li><a href="#expert">Pricing</a></li>
+        <li><a href="#blog">Resources</a></li>
+      </ul>
+      <div class="mobile-actions">
+        <a href="#" class="btn-signin">Sign In</a>
+        <a href="#" class="btn btn-primary">Sign Up</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById("mobile-toggle-3");
+  const menu = document.getElementById("mobile-menu-3");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
+
+  toggle?.addEventListener("click", () => {
+    menu?.classList.toggle("active");
+    menuIcon?.classList.toggle("hidden");
+    closeIcon?.classList.toggle("hidden");
+  });
+
+  // Close menu when clicking a link
+  const links = document.querySelectorAll("#mobile-menu-3 a");
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      menu?.classList.remove("active");
+      menuIcon?.classList.remove("hidden");
+      closeIcon?.classList.add("hidden");
+    });
+  });
+</script>
+
+<style>
+  .header-3 {
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+  }
+
+  .flex-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--color-orange, #FF9900);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 24px;
+  }
+
+  .logo-text {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  .nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav a {
+    color: #1a1a1a;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+
+  .nav a:hover {
+    color: var(--color-orange, #FF9900);
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .btn-signin {
+    color: #1a1a1a;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+
+  .btn-primary {
+    background: var(--color-orange, #FF9900);
+    color: white;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+
+  .mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1a1a1a;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 77px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 40px 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: 0.3s ease;
+    z-index: 999;
+  }
+
+  .mobile-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 32px;
+  }
+
+  .mobile-menu li {
+    margin-bottom: 24px;
+  }
+
+  .mobile-menu a {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  .mobile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  @media (max-width: 992px) {
+    .nav, .header-actions {
+      display: none;
+    }
+    .mobile-toggle {
+      display: block;
+    }
+  }
+</style>
