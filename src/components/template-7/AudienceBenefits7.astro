@@ -1,0 +1,290 @@
+---
+import { CheckCircle2, Zap, Clock, CreditCard, Upload, TrendingUp, Users, Video, ShoppingBag, Box, Star } from "@lucide/astro";
+---
+
+<section class="audience-benefits-7">
+  <div class="container-narrow">
+    <div class="audience-section">
+      <div class="section-header text-center">
+        <span class="badge">WHO IS THIS FOR?</span>
+        <h2>💡 Cocok Untuk Siapa?</h2>
+      </div>
+      <div class="audience-grid">
+        <div class="audience-item">
+          <div class="icon-wrapper">
+            <Users class="icon text-blue" />
+          </div>
+          <span>Pemula yang baru mulai affiliate</span>
+        </div>
+        <div class="audience-item">
+          <div class="icon-wrapper">
+            <Video class="icon text-purple" />
+          </div>
+          <span>Konten kreator yang butuh stok video</span>
+        </div>
+        <div class="audience-item">
+          <div class="icon-wrapper">
+            <ShoppingBag class="icon text-orange" />
+          </div>
+          <span>Seller Shopee & TikTok</span>
+        </div>
+        <div class="audience-item">
+          <div class="icon-wrapper">
+            <Box class="icon text-indigo" />
+          </div>
+          <span>Reseller produk digital</span>
+        </div>
+        <div class="audience-item">
+          <div class="icon-wrapper">
+            <Clock class="icon text-red" />
+          </div>
+          <span>Orang sibuk yang ingin upload konten cepat</span>
+        </div>
+        <div class="audience-item">
+          <div class="icon-wrapper">
+            <TrendingUp class="icon text-green" />
+          </div>
+          <span>Siapa saja yang ingin mulai cari penghasilan online</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="benefits-section">
+      <div class="section-header text-center">
+        <span class="badge red">BENEFITS</span>
+        <h2>🚀 Keuntungan Menggunakan Paket Ini</h2>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon bg-blue-light">
+            <Clock class="h-6 w-6 text-blue" />
+          </div>
+          <h3>Hemat Waktu</h3>
+          <p>Tidak perlu rekam video sendiri. Semua sudah tersedia dan siap pakai kapanpun.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon bg-green-light">
+            <CreditCard class="h-6 w-6 text-green" />
+          </div>
+          <h3>Hemat Biaya</h3>
+          <p>Tidak perlu beli produk fisik hanya untuk dibuat konten review. Hemat budget modal!</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon bg-purple-light">
+            <Upload class="h-6 w-6 text-purple" />
+          </div>
+          <h3>Tinggal Upload</h3>
+          <p>Video sudah siap pakai dengan kualitas HD. Siap diposting ke berbagai platform sosial media.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon bg-orange-light">
+            <TrendingUp class="h-6 w-6 text-orange" />
+          </div>
+          <h3>Potensi Cuan Lebih Cepat</h3>
+          <p>Gunakan untuk affiliate atau jual kembali dengan keuntungan 100% milik kamu sepenuhnya.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .audience-benefits-7 {
+    padding: 120px 0;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Subtle background pattern */
+  .audience-benefits-7::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #eee, transparent);
+  }
+
+  .container-narrow {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .section-header {
+    margin-bottom: 48px;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 11px;
+    font-weight: 800;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+
+  .badge.red {
+    background: #fef2f2;
+    color: #ef4444;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: 950;
+    color: #0f172a;
+    letter-spacing: -1px;
+    line-height: 1.2;
+  }
+
+  /* Audience Section */
+  .audience-section {
+    margin-bottom: 120px;
+  }
+
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .audience-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .audience-item:hover {
+    transform: translateX(10px);
+    border-color: #3b82f6;
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.1);
+  }
+
+  .icon-wrapper {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+
+  .audience-item span {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1.4;
+  }
+
+  /* Benefits Section */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .benefit-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 32px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  .benefit-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 32px;
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(248,250,252,1) 100%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    border-color: #e2e8f0;
+  }
+
+  .benefit-card:hover::before {
+    opacity: 1;
+  }
+
+  .benefit-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: transform 0.4s ease;
+  }
+
+  .benefit-card:hover .benefit-icon {
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  .benefit-card h3 {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 16px;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+  }
+
+  .benefit-card p {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  /* Colors */
+  .text-blue { color: #2563eb; }
+  .text-green { color: #059669; }
+  .text-purple { color: #7c3aed; }
+  .text-orange { color: #d97706; }
+  .text-red { color: #dc2626; }
+  .text-indigo { color: #4f46e5; }
+
+  .bg-blue-light { background: #eff6ff; }
+  .bg-green-light { background: #ecfdf5; }
+  .bg-purple-light { background: #f5f3ff; }
+  .bg-orange-light { background: #fffbeb; }
+
+  @media (max-width: 768px) {
+    .audience-grid, .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .benefit-card {
+      padding: 32px;
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+  }
+</style>
+

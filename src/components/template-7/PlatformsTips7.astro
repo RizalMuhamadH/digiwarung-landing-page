@@ -1,0 +1,351 @@
+---
+import {
+  Smartphone,
+  CheckCircle2,
+  AlertTriangle,
+  Video,
+  MessageSquare,
+  Globe,
+  Edit3,
+  Type,
+  Image,
+  Frame,
+  Mic,
+} from "@lucide/astro";
+import Instagram from "../../assets/instagram.svg";
+import Twitter from "../../assets/twitter.svg";
+---
+
+<section class="platforms-tips-7">
+  <div class="container-narrow">
+    <!-- Platforms Section -->
+    <div class="platforms-section">
+      <div class="section-header text-center">
+        <span class="badge blue">MULTI-PLATFORM</span>
+        <h2>📱 Bisa Digunakan di Banyak Platform</h2>
+      </div>
+
+      <div class="platform-list">
+        <div class="platform-item">
+          <div class="platform-icon shopee">
+            <Smartphone class="h-6 w-6" />
+          </div>
+          <span>Shopee Video</span>
+        </div>
+        <div class="platform-item">
+          <div class="platform-icon tiktok">
+            <Video class="h-6 w-6" />
+          </div>
+          <span>TikTok Affiliate</span>
+        </div>
+        <div class="platform-item">
+          <div class="platform-icon instagram">
+            <Instagram class="h-6 w-6" />
+          </div>
+          <span>Instagram Reels</span>
+        </div>
+        <div class="platform-item">
+          <div class="platform-icon facebook">
+            <Globe class="h-6 w-6" />
+          </div>
+          <span>Facebook Reels</span>
+        </div>
+        <div class="platform-item">
+          <div class="platform-icon whatsapp">
+            <MessageSquare class="h-6 w-6" />
+          </div>
+          <span>WhatsApp Status</span>
+        </div>
+        <div class="platform-item">
+          <div class="platform-icon twitter">
+            <Twitter class="h-6 w-6" />
+          </div>
+          <span>Twitter / X</span>
+        </div>
+      </div>
+      <p class="plus-more text-center">...dan berbagai platform lainnya!</p>
+    </div>
+
+    <!-- Tips Section -->
+    <div class="tips-section">
+      <div class="tips-card">
+        <div class="tips-header">
+          <AlertTriangle class="h-8 w-8 text-orange" />
+          <h3>Tips Agar Konten Lebih Aman & Menarik</h3>
+        </div>
+
+        <div class="tips-content">
+          <div class="tip-box highlight">
+            <p>
+              Untuk <strong>Shopee Video</strong> dan <strong
+                >TikTok Affiliate</strong
+              >, disarankan edit sedikit video dengan:
+            </p>
+            <div class="edit-options">
+              <div class="edit-option">
+                <Type class="h-4 w-4" />
+                <span>Tambahan Teks</span>
+              </div>
+              <div class="edit-option">
+                <Image class="h-4 w-4" />
+                <span>Background</span>
+              </div>
+              <div class="edit-option">
+                <Frame class="h-4 w-4" />
+                <span>Frame</span>
+              </div>
+              <div class="edit-option">
+                <Mic class="h-4 w-4" />
+                <span>Voice Over</span>
+              </div>
+            </div>
+            <p class="rationale">
+              Tujuannya agar akun kamu terlihat lebih unik dan mengurangi risiko
+              terdeteksi sebagai konten duplikat.
+            </p>
+          </div>
+
+          <div class="tip-box simple">
+            <CheckCircle2 class="h-5 w-5 text-green" />
+            <p>
+              Untuk <strong>Instagram, Facebook, WhatsApp,</strong> dan platform lain,
+              video bisa langsung digunakan tanpa edit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .platforms-tips-7 {
+    padding: 100px 0;
+    background: #f8fafc;
+  }
+
+  .container-narrow {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .section-header {
+    margin-bottom: 48px;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #e0e7ff;
+    color: #4338ca;
+    font-size: 11px;
+    font-weight: 800;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 950;
+    color: #0f172a;
+    letter-spacing: -1px;
+  }
+
+  /* Platforms Styles */
+  .platforms-section {
+    margin-bottom: 100px;
+  }
+
+  .platform-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .platform-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+  }
+
+  .platform-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  .shopee {
+    background: #ee4d2d;
+  }
+  .tiktok {
+    background: #000000;
+  }
+  .instagram {
+    background: linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+  }
+  .facebook {
+    background: #1877f2;
+  }
+  .whatsapp {
+    background: #25d366;
+  }
+  .twitter {
+    background: #1da1f2;
+  }
+
+  .platform-item span {
+    font-size: 14px;
+    font-weight: 800;
+    color: #1e293b;
+  }
+
+  .plus-more {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 600;
+  }
+
+  /* Tips Styles */
+  .tips-card {
+    background: white;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tips-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at top right, #fff7ed, transparent);
+    z-index: 0;
+  }
+
+  .tips-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .tips-header h3 {
+    font-size: 24px;
+    font-weight: 900;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+  }
+
+  .text-orange {
+    color: #f97316;
+  }
+
+  .tips-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .tip-box {
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .tip-box.highlight {
+    background: #fff7ed;
+    border: 1px solid #ffedd5;
+  }
+
+  .tip-box.highlight p {
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #9a3412;
+    line-height: 1.5;
+  }
+
+  .edit-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .edit-option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #c2410c;
+    border: 1px solid #fed7aa;
+  }
+
+  .rationale {
+    font-size: 14px !important;
+    color: #9a3412 !important;
+    opacity: 0.8;
+    font-style: italic;
+    margin-bottom: 0 !important;
+  }
+
+  .tip-box.simple {
+    background: #f0fdf4;
+    border: 1px solid #dcfce7;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .tip-box.simple p {
+    font-size: 15px;
+    color: #166534;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .platform-list {
+      grid-template-columns: 1fr 1fr;
+    }
+    .tips-card {
+      padding: 24px;
+    }
+    .tips-header h3 {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 26px;
+    }
+  }
+</style>
