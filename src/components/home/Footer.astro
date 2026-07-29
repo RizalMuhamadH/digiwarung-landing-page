@@ -1,0 +1,248 @@
+---
+import { Image } from "astro:assets";
+import logoImg from "../../assets/logo.png";
+---
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <!-- Brand column -->
+    <div class="footer-brand-col">
+      <a href="#" class="logo">
+        <Image src={logoImg} alt="DigiWarung Logo" class="logo-img" />
+        <span class="logo-text">Digi<span class="highlight">Warung</span></span>
+      </a>
+      <p class="brand-desc">
+        DigiWarung Tech Studio membantu Anda merancang, membangun, dan
+        meluncurkan produk digital berskala nasional dengan performa dan
+        skalabilitas tingkat enterprise.
+      </p>
+      <div class="social-icons">
+        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+        <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+      </div>
+    </div>
+
+    <!-- Links columns -->
+    <div class="footer-links-col">
+      <h6>Layanan Kami</h6>
+      <ul>
+        <li><a href="#services">Pembuatan Website Portal</a></li>
+        <li><a href="#services">Aplikasi Android & iOS</a></li>
+        <li><a href="#services">SaaS & Cloud Console</a></li>
+        <li><a href="#services">Optimasi SEO & Traffic</a></li>
+        <li><a href="#services">Agensi Promosi Produk</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links-col">
+      <h6>Jelajahi</h6>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#portfolio">Portofolio Klien</a></li>
+        <li><a href="#stats">Statistik & Kinerja</a></li>
+        <li><a href="#pricing">Daftar Paket Harga</a></li>
+        <li><a href="/templates" class="text-glow">Pratinjau Template ➔</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links-col">
+      <h6>Hubungi Kami</h6>
+      <p class="contact-text-p">
+        Sudirman Central Business District (SCBD), Lantai 42, Tower Indonesia,
+        Jakarta Selatan.
+      </p>
+      <p class="contact-text-p">
+        <strong>WhatsApp:</strong> +62 812-3456-7890<br />
+        <strong>Email:</strong> hello@digiwarung.id
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container bottom-container">
+      <p class="copyright-p">
+        © 2026 DigiWarung Tech Studio. Hak Cipta Dilindungi Undang-Undang.
+      </p>
+      <div class="bottom-links">
+        <a href="#">Kebijakan Privasi</a>
+        <a href="#">Syarat & Ketentuan</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #040307;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 80px 0 0;
+    position: relative;
+    z-index: 10;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .footer-brand-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+  }
+
+  .logo-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .logo-text .highlight {
+    background: linear-gradient(135deg, #6366f1, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .brand-desc {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 320px;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 12px;
+  }
+
+  .social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+
+  .social-link:hover {
+    background: #6366f1;
+    border-color: #6366f1;
+    transform: translateY(-2px);
+  }
+
+  /* Link columns */
+  .footer-links-col h6 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+
+  .footer-links-col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-links-col a {
+    color: #64748b;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+
+  .footer-links-col a:hover {
+    color: #ffffff;
+  }
+
+  .text-glow {
+    color: #06b6d4 !important;
+    font-weight: 700;
+  }
+
+  .text-glow:hover {
+    color: #22d3ee !important;
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+  }
+
+  .contact-text-p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .contact-text-p strong {
+    color: #cbd5e1;
+  }
+
+  /* Footer bottom */
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px 0;
+    background-color: #020104;
+  }
+
+  .bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .copyright-p {
+    color: #475569;
+    font-size: 13px;
+  }
+
+  .bottom-links {
+    display: flex;
+    gap: 24px;
+  }
+
+  .bottom-links a {
+    color: #475569;
+    font-size: 13px;
+  }
+
+  .bottom-links a:hover {
+    color: #cbd5e1;
+  }
+
+  @media (max-width: 992px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 580px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .bottom-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>

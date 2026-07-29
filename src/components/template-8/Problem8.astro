@@ -1,0 +1,231 @@
+---
+import { AlertCircle, Clock, EyeOff, Bot } from "@lucide/astro";
+---
+
+<section id="problem" class="problem-8">
+  <div class="glow-decor"></div>
+  <div class="container">
+    <div class="header text-center">
+      <h2 class="section-title">Jujur deh. Kamu capek nggak?</h2>
+      <p class="section-subtitle">Kebanyakan guru menghadapi tantangan berat yang sama setiap hari:</p>
+    </div>
+
+    <div class="problem-grid">
+      <!-- Card 1 -->
+      <div class="problem-card">
+        <div class="icon-wrapper bg-red">
+          <Clock class="icon" />
+        </div>
+        <h3>Capek Bikin Materi Dari Nol</h3>
+        <p>Tiap minggu habis waktu berjam-jam cuma buat nyiapin bahan ajar, padahal masih banyak tugas administrasi lain.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="problem-card">
+        <div class="icon-wrapper bg-orange">
+          <EyeOff class="icon" />
+        </div>
+        <h3>Siswa Ngantuk & Bosan</h3>
+        <p>Udah capek-capek bikin slide materi biasa, tapi pas di kelas siswa malah malas-malasan, ngantuk, dan tidak fokus.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="problem-card">
+        <div class="icon-wrapper bg-purple">
+          <Bot class="icon" />
+        </div>
+        <h3>Bingung Cara Pakai AI</h3>
+        <p>Sering dengar katanya AI itu "canggih" dan bisa bantu guru, tapi bingung mulainya dari mana dan gimana cara pakainya.</p>
+      </div>
+    </div>
+
+    <div class="middle-text text-center">
+      <p class="comparison-lead">
+        Sementara guru lain sudah jauh di depan — materi mereka <strong>interaktif, seru,</strong> dan <strong>siswa betah belajar</strong> sampai selesai.
+      </p>
+    </div>
+
+    <div class="hook-box">
+      <div class="hook-content">
+        <AlertCircle class="hook-icon" />
+        <p class="hook-text">
+          Masalahnya bukan kamu kurang kreatif. Kamu cuma belum punya alat yang tepat.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .problem-8 {
+    padding: 100px 0;
+    background-color: #0b0f19;
+    color: #f8fafc;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glow-decor {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(239, 68, 68, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .header {
+    margin-bottom: 60px;
+  }
+
+  .section-title {
+    font-size: 38px;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+
+  .section-subtitle {
+    font-size: 18px;
+    color: #94a3b8;
+  }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .problem-card {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 36px 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .problem-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(239, 68, 68, 0.25);
+    box-shadow: 0 15px 35px rgba(239, 68, 68, 0.05);
+  }
+
+  .icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .icon-wrapper .icon {
+    width: 28px;
+    height: 28px;
+    color: white;
+  }
+
+  .bg-red { background: #ef4444; }
+  .bg-orange { background: #f97316; }
+  .bg-purple { background: #8b5cf6; }
+
+  .problem-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: #ffffff;
+  }
+
+  .problem-card p {
+    font-size: 15px;
+    color: #94a3b8;
+    line-height: 1.6;
+  }
+
+  .middle-text {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+  }
+
+  .comparison-lead {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cbd5e1;
+  }
+
+  .comparison-lead strong {
+    color: #ffffff;
+  }
+
+  .hook-box {
+    background: rgba(245, 158, 11, 0.04);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-left: 6px solid #f59e0b;
+    border-radius: 16px;
+    padding: 24px 30px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hook-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .hook-icon {
+    width: 32px;
+    height: 32px;
+    color: #f59e0b;
+    flex-shrink: 0;
+  }
+
+  .hook-text {
+    font-size: 18px;
+    font-weight: 750;
+    color: #fde047;
+    margin: 0;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  @media (max-width: 768px) {
+    .problem-8 {
+      padding: 70px 0;
+    }
+
+    .problem-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .section-title {
+      font-size: 30px;
+    }
+
+    .hook-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 12px;
+    }
+
+    .hook-text {
+      text-align: center;
+    }
+  }
+</style>

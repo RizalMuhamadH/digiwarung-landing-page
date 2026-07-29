@@ -1,0 +1,308 @@
+---
+import { ShieldCheck, Zap, AlertCircle, ShoppingCart } from "@lucide/astro";
+---
+
+<section id="pricing" class="pricing-8">
+  <div class="glow-effect"></div>
+  
+  <div class="container-narrow">
+    <div class="pricing-card">
+      <div class="card-header text-center">
+        <span class="badge">💰 PENAWARAN KHUSUS HARI INI</span>
+        <h2>Masih mau pikir-pikir?</h2>
+        <p class="sub-lead"> Sementara kamu pikir-pikir, guru lain sudah download dan langsung pakai.</p>
+      </div>
+
+      <div class="value-proposition">
+        <div class="val-box">
+          <Zap class="val-icon" />
+          <p>Harganya cuma <strong>Rp 125.000.</strong> Satu kali makan di restoran, tapi manfaatnya untuk ratusan jam mengajar ke depan.</p>
+        </div>
+      </div>
+
+      <div class="price-display text-center">
+        <span class="old-price">Rp 175.000</span>
+        <div class="new-price">
+          <span class="currency">Hanya</span> Rp 125.000
+        </div>
+      </div>
+
+      <div class="cta-area">
+        <a href="#" class="btn-checkout">
+          <ShoppingCart class="btn-icon" />
+          <span>BELI SEKARANG — Rp 125.000</span>
+        </a>
+        
+        <p class="payment-methods text-center">
+          Bayar via <strong>QRIS · OVO · DANA · ShopeePay · Virtual Account</strong>
+        </p>
+        
+        <div class="trust-badge">
+          <ShieldCheck class="trust-icon" />
+          <span>Akses langsung setelah pembayaran. Tidak perlu nunggu.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Disclaimer Note -->
+    <div class="disclaimer-note">
+      <div class="note-header">
+        <AlertCircle class="note-icon" />
+        <h4>Catatan Penting:</h4>
+      </div>
+      <p>
+        Hasil Canva Code bisa bervariasi tergantung input yang kamu berikan. Kalau hasilnya belum pas, tinggal ubah prompt atau refresh — bukan berarti produknya tidak bekerja, tapi karena AI butuh arahan yang tepat. Makanya baca dulu, pahami dulu, baru optimalkan.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing-8 {
+    padding: 100px 0 120px;
+    background: #090d16;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glow-effect {
+    position: absolute;
+    bottom: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Pricing Card */
+  .pricing-card {
+    background: #0f172a;
+    border-radius: 36px;
+    padding: 60px 48px;
+    border: 2px solid #3b82f6;
+    box-shadow: 0 30px 60px rgba(59, 130, 246, 0.1);
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  .badge {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+    padding: 8px 18px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+  }
+
+  .card-header h2 {
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 12px;
+    color: #ffffff;
+    letter-spacing: -1px;
+  }
+
+  .sub-lead {
+    font-size: 16px;
+    color: #94a3b8;
+    max-width: 500px;
+    margin: 0 auto 36px;
+    line-height: 1.5;
+  }
+
+  /* Value Proposition Box */
+  .value-proposition {
+    margin-bottom: 40px;
+  }
+
+  .val-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 20px 24px;
+    border-radius: 20px;
+  }
+
+  .val-icon {
+    width: 28px;
+    height: 28px;
+    color: #fbbf24;
+    flex-shrink: 0;
+  }
+
+  .val-box p {
+    font-size: 15px;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+  }
+
+  .val-box strong {
+    color: #ffffff;
+  }
+
+  /* Price Display */
+  .price-display {
+    margin-bottom: 40px;
+  }
+
+  .old-price {
+    font-size: 20px;
+    color: #64748b;
+    text-decoration: line-through;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .new-price {
+    font-size: 64px;
+    font-weight: 950;
+    color: #10b981;
+    line-height: 1;
+    text-shadow: 0 0 30px rgba(16, 185, 129, 0.2);
+  }
+
+  .new-price .currency {
+    font-size: 18px;
+    vertical-align: middle;
+    margin-right: 6px;
+    color: #94a3b8;
+    font-weight: 700;
+  }
+
+  /* CTA Area */
+  .btn-checkout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: #ffffff;
+    padding: 22px 32px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 900;
+    text-decoration: none;
+    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.25);
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .btn-checkout:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 45px rgba(16, 185, 129, 0.4);
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  }
+
+  .btn-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .payment-methods {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+  }
+
+  .payment-methods strong {
+    color: #cbd5e1;
+  }
+
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #60a5fa;
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    padding: 10px 18px;
+    border-radius: 12px;
+    max-width: fit-content;
+    margin: 0 auto;
+  }
+
+  .trust-icon {
+    width: 16px;
+    height: 16px;
+    color: #60a5fa;
+  }
+
+  /* Disclaimer Note */
+  .disclaimer-note {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    padding: 30px;
+  }
+
+  .note-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .note-icon {
+    width: 20px;
+    height: 20px;
+    color: #fbbf24;
+  }
+
+  .note-header h4 {
+    font-size: 15px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .disclaimer-note p {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+  }
+
+  @media (max-width: 640px) {
+    .pricing-card {
+      padding: 40px 24px;
+    }
+    
+    .card-header h2 {
+      font-size: 28px;
+    }
+
+    .new-price {
+      font-size: 48px;
+    }
+
+    .btn-checkout {
+      font-size: 16px;
+      padding: 18px 24px;
+    }
+  }
+</style>

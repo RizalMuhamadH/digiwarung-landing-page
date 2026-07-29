@@ -1,0 +1,1049 @@
+---
+import { Image } from "astro:assets";
+import bekasiSplashImg from "../../assets/saas/bekasi_splash.jpg";
+import bekasiBookletImg from "../../assets/saas/bekasi_booklet.jpeg";
+import gravspaceSigninImg from "../../assets/saas/fireshot_signin.png";
+import gravspaceDashboardImg from "../../assets/saas/fireshot_dashboard.png";
+import gravspaceBucketsImg from "../../assets/saas/fireshot_buckets.png";
+import nursynapseImg from "../../assets/saas/nursynapse_pilot_2026.png";
+---
+<section class="portfolio-section" id="portfolio">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="section-title">
+        Portofolio Produk & <br />
+        <span class="gradient-text">Studi Kasus Klien</span>
+      </h2>
+      <p class="section-subtitle">
+        Jelajahi ekosistem digital yang telah kami rancang dan kembangkan, mulai dari portal berita jutaan pembaca hingga platform SaaS berskala korporat.
+      </p>
+    </div>
+
+    <!-- Portfolio Tabs Selector -->
+    <div class="portfolio-tabs">
+      <button class="tab-btn active" data-tab="websites">
+        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+        <span>Portal Media & Web (5 Platform)</span>
+      </button>
+      <button class="tab-btn" data-tab="mobile">
+        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+        <span>Aplikasi Mobile (WOW Bekasi)</span>
+      </button>
+      <button class="tab-btn" data-tab="saas">
+        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="2" y1="20" x2="22" y2="20"></line><line x1="12" y1="17" x2="12" y2="20"></line></svg>
+        <span>SaaS & Platform Riset (2 Platform)</span>
+      </button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div class="portfolio-container">
+      
+      <!-- TAB 1: WEBSITE PORTFOLIO -->
+      <div class="tab-content active" id="tab-websites">
+        <div class="websites-grid">
+          <!-- Item 1: AyoBandung -->
+          <a href="https://www.ayobandung.id/" target="_blank" class="web-portfolio-card">
+            <div class="web-preview-header bandung">
+              <span class="web-logo">Ayo<span class="hl">Bandung</span>.id</span>
+              <span class="web-tag tag-news">News & Media</span>
+            </div>
+            <div class="web-info">
+              <h3>AyoBandung.id</h3>
+              <p>Portal berita regional terkemuka Jawa Barat dengan jutaan kunjungan bulanan, menyajikan berita terkini, gaya hidup, dan peristiwa.</p>
+              <div class="web-metrics">
+                <div><span>Uptime</span><strong>99.99%</strong></div>
+                <div><span>Monthly Traffic</span><strong>4.2M+ Views</strong></div>
+                <div><span>Load Time</span><strong>0.8s</strong></div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Item 2: AyoJakarta -->
+          <a href="https://www.ayojakarta.com/" target="_blank" class="web-portfolio-card">
+            <div class="web-preview-header jakarta">
+              <span class="web-logo">Ayo<span class="hl">Jakarta</span>.com</span>
+              <span class="web-tag tag-news">Metro Media</span>
+            </div>
+            <div class="web-info">
+              <h3>AyoJakarta.com</h3>
+              <p>Platform media berita utama metropolitan Jakarta dengan arsitektur serverless yang sanggup menampung puncak traffic secara instan.</p>
+              <div class="web-metrics">
+                <div><span>Uptime</span><strong>99.98%</strong></div>
+                <div><span>Monthly Traffic</span><strong>2.8M+ Views</strong></div>
+                <div><span>Load Time</span><strong>0.9s</strong></div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Item 3: AyoBiz -->
+          <a href="https://www.ayobiz.id/" target="_blank" class="web-portfolio-card">
+            <div class="web-preview-header biz">
+              <span class="web-logo">Ayo<span class="hl">Biz</span>.id</span>
+              <span class="web-tag tag-biz">Business Portal</span>
+            </div>
+            <div class="web-info">
+              <h3>AyoBiz.id</h3>
+              <p>Direktori bisnis, portal finansial, dan jaringan UMKM nasional untuk menghubungkan korporasi dengan industri kreatif lokal.</p>
+              <div class="web-metrics">
+                <div><span>Uptime</span><strong>99.95%</strong></div>
+                <div><span>SMEs Registered</span><strong>12K+ Brands</strong></div>
+                <div><span>Load Time</span><strong>1.1s</strong></div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Item 4: AyoJelajah -->
+          <a href="https://www.ayojelajah.id/" target="_blank" class="web-portfolio-card">
+            <div class="web-preview-header jelajah">
+              <span class="web-logo">Ayo<span class="hl">Jelajah</span>.id</span>
+              <span class="web-tag tag-travel">Tourism Directory</span>
+            </div>
+            <div class="web-info">
+              <h3>AyoJelajah.id</h3>
+              <p>Portal pariwisata interaktif yang memetakan destinasi liburan, kuliner, dan tips perjalanan terlengkap di seluruh Indonesia.</p>
+              <div class="web-metrics">
+                <div><span>Uptime</span><strong>99.99%</strong></div>
+                <div><span>Destinations</span><strong>1.5K+ Spots</strong></div>
+                <div><span>Load Time</span><strong>0.7s</strong></div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Item 5: AyoTekno -->
+          <a href="https://www.ayotekno.id/" target="_blank" class="web-portfolio-card">
+            <div class="web-preview-header tekno">
+              <span class="web-logo">Ayo<span class="hl">Tekno</span>.id</span>
+              <span class="web-tag tag-tech">Technology</span>
+            </div>
+            <div class="web-info">
+              <h3>AyoTekno.id</h3>
+              <p>Media berita teknologi, review gadget terbaru, berita game, dan tutorial komputasi modern yang dioptimasi penuh untuk monetisasi iklan.</p>
+              <div class="web-metrics">
+                <div><span>Uptime</span><strong>99.99%</strong></div>
+                <div><span>Monthly Traffic</span><strong>1.5M+ Views</strong></div>
+                <div><span>Load Time</span><strong>0.7s</strong></div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- TAB 2: MOBILE APPLICATION (WOW BEKASI SIMULATOR) -->
+      <div class="tab-content" id="tab-mobile">
+        <div class="app-showcase-layout">
+          <div class="app-showcase-description">
+            <div class="showcase-badge cyan">App Development Case Study</div>
+            <h3>WOW Bekasi Mobile Portal</h3>
+            <p class="desc-para">
+              Aplikasi mobile terintegrasi yang dirancang khusus untuk mendukung inisiatif Smart City Kota Bekasi. Menampilkan panduan pariwisata, booklet visual 5 tahun pencapaian kota, akses layanan publik, serta direktori lokal secara real-time.
+            </p>
+            <div class="desc-bullets">
+              <div class="desc-bullet-item">
+                <span class="bullet-check">✓</span>
+                <div>
+                  <strong>Aplikasi Skala Publik & Pemerintahan</strong>
+                  <p>Kehandalan tinggi yang aman diakses oleh ratusan ribu warga Kota Bekasi.</p>
+                </div>
+              </div>
+              <div class="desc-bullet-item">
+                <span class="bullet-check">✓</span>
+                <div>
+                  <strong>Booklet & Majalah Digital Interaktif</strong>
+                  <p>Memiliki visualisasi booklet yang mulus, responsif, dan mudah dibaca.</p>
+                </div>
+              </div>
+            </div>
+            <div class="app-simulation-control">
+              <p>Gunakan simulator di samping untuk berpindah layar:</p>
+              <div class="sim-btns">
+                <button class="sim-btn active" id="btn-show-splash">Layar Splash (WOW Bekasi)</button>
+                <button class="sim-btn" id="btn-show-booklet">Layar Booklet (Majalah Digital)</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-simulator-container">
+            <!-- Mobile Phone Frame Mockup -->
+            <div class="smartphone-frame">
+              <div class="smartphone-screen">
+                <div class="phone-notch"></div>
+                <div class="phone-status-bar">
+                  <span>11:47</span>
+                  <span class="icons">0.59K/d 🔋 84%</span>
+                </div>
+                
+                <!-- APP SCREEN 1: SPLASH SCREEN (WOW BEKASI) -->
+                <div class="app-screen-content active" id="screen-splash">
+                  <Image src={bekasiSplashImg} alt="Wow Bekasi Splash" class="app-screen-img" />
+                </div>
+
+                <!-- APP SCREEN 2: BOOKLET SCREEN (WOW BEKASI ACHIEVEMENTS) -->
+                <div class="app-screen-content" id="screen-booklet">
+                  <Image src={bekasiBookletImg} alt="Wow Bekasi Booklet" class="app-screen-img" />
+                </div>
+
+              </div>
+              <div class="phone-home-indicator"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: SAAS & PLATFORM RISET -->
+      <div class="tab-content" id="tab-saas">
+        <!-- Sub-selector for SaaS platforms -->
+        <div class="saas-platform-selector">
+          <button class="saas-plat-btn active" data-saas-platform="gravspace">
+            GravSpace Console
+          </button>
+          <button class="saas-plat-btn" data-saas-platform="nursynapse">
+            Nursynapse (EdTech BIMA)
+          </button>
+        </div>
+
+        <!-- Platform 1: GravSpace Console -->
+        <div class="saas-showcase-layout active" id="saas-gravspace-layout">
+          <div class="saas-showcase-description">
+            <div class="showcase-badge purple">SaaS Enterprise Platform</div>
+            <h3>GravSpace Console</h3>
+            <p class="desc-para">
+              Konsol manajemen S3 tingkat lanjut berkecepatan tinggi yang dirancang untuk arsitektur cloud korporat. Memberikan statistik kapasitas logikal, analitik bucket, live audit log, dan IAM engine terenkripsi.
+            </p>
+            <div class="saas-nav-simulator">
+              <p>Simulasi Navigasi Konsol:</p>
+              <div class="saas-tabs-btns">
+                <button class="saas-tab-btn" id="saas-btn-signin">1. Layar Sign-in (Enkripsi)</button>
+                <button class="saas-tab-btn active" id="saas-btn-dash">2. Dashboard Analitik</button>
+                <button class="saas-tab-btn" id="saas-btn-buckets">3. Manajemen Bucket S3</button>
+              </div>
+            </div>
+            <div class="tech-spec-grid">
+              <div class="spec-item">
+                <span>Teknologi</span>
+                <strong>Astro & Node.js</strong>
+              </div>
+              <div class="spec-item">
+                <span>Enkripsi</span>
+                <strong>AES-256 + S3 IAM</strong>
+              </div>
+              <div class="spec-item">
+                <span>Skalabilitas</span>
+                <strong>Multi-Region Cluster</strong>
+              </div>
+            </div>
+
+            <div class="saas-link-wrapper" style="margin-top: 24px;">
+              <a href="https://github.com/GravSpace/GravSpace" target="_blank" class="github-link">
+                <svg class="github-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span>Lihat di GitHub</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="saas-simulator-container">
+            <!-- Simulated Laptop Mockup Frame -->
+            <div class="laptop-frame">
+              <div class="laptop-screen">
+                
+                <!-- SCREEN 1: SIGN IN (GRAVSPACE) -->
+                <div class="saas-screen-content" id="saas-screen-signin">
+                  <Image src={gravspaceSigninImg} alt="GravSpace Sign In" class="saas-screen-img" />
+                </div>
+
+                <!-- SCREEN 2: DASHBOARD (GRAVSPACE) -->
+                <div class="saas-screen-content active" id="saas-screen-dash">
+                  <Image src={gravspaceDashboardImg} alt="GravSpace Dashboard" class="saas-screen-img" />
+                </div>
+
+                <!-- SCREEN 3: BUCKET LISTS (GRAVSPACE) -->
+                <div class="saas-screen-content" id="saas-screen-buckets">
+                  <Image src={gravspaceBucketsImg} alt="GravSpace Buckets" class="saas-screen-img" />
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Platform 2: Nursynapse Platform -->
+        <div class="saas-showcase-layout" id="saas-nursynapse-layout">
+          <div class="saas-showcase-description">
+            <div class="showcase-badge teal">Pilot Project Hibah Riset</div>
+            <h3>Nursynapse</h3>
+            <p class="desc-para">
+              Platform cerdas untuk pendidikan keperawatan yang mengintegrasikan kurikulum nasional dengan teknologi pembelajaran modern untuk menghadirkan pengalaman belajar personal, klinis, dan terukur.
+            </p>
+            
+            <div class="desc-bullets text-left" style="margin-bottom: 30px;">
+              <div class="desc-bullet-item">
+                <span class="bullet-check" style="background: rgba(20, 184, 166, 0.1); color: #14b8a6;">✓</span>
+                <div>
+                  <strong>Kurikulum Standar PPNI</strong>
+                  <p>Materi pembelajaran dan evaluasi yang diselaraskan langsung dengan standar nasional keperawatan.</p>
+                </div>
+              </div>
+              <div class="desc-bullet-item">
+                <span class="bullet-check" style="background: rgba(20, 184, 166, 0.1); color: #14b8a6;">✓</span>
+                <div>
+                  <strong>Hibah Penelitian BIMA 2026</strong>
+                  <p>Dikembangkan sebagai pilot project inovasi pendidikan keperawatan berlisensi resmi kementerian.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tech-spec-grid">
+              <div class="spec-item">
+                <span>Program Hibah</span>
+                <strong>BIMA 2026</strong>
+              </div>
+              <div class="spec-item">
+                <span>Tipe Proyek</span>
+                <strong>Pilot Riset</strong>
+              </div>
+              <div class="spec-item">
+                <span>Metodologi</span>
+                <strong>Evidence-Based</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="saas-simulator-container">
+            <!-- Simulated Laptop Mockup Frame -->
+            <div class="laptop-frame">
+              <div class="laptop-screen">
+                <div class="saas-screen-content active">
+                  <Image src={nursynapseImg} alt="Nursynapse Platform" class="saas-screen-img" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .portfolio-section {
+    background-color: #080711;
+    padding: 120px 0;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  }
+
+  .section-header {
+    max-width: 700px;
+    margin: 0 auto 60px;
+  }
+
+  .section-title {
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 20px;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #6366f1, #06b6d4, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .section-subtitle {
+    color: #94a3b8;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Tabs Navigation Styling */
+  .portfolio-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #94a3b8;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+  }
+
+  .tab-btn:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+
+  .tab-btn.active {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(6, 182, 212, 0.15));
+    border-color: #6366f1;
+    color: #ffffff;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.15);
+  }
+
+  .tab-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Content Toggling */
+  .tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .tab-content.active {
+    display: block;
+    opacity: 1;
+  }
+
+  /* TAB 1: WEBSITES PORTFOLIO */
+  .websites-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .web-portfolio-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+  }
+
+  .web-portfolio-card:hover {
+    border-color: #10b981;
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.06);
+  }
+
+  .web-preview-header {
+    height: 140px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .web-preview-header.bandung {
+    background: linear-gradient(135deg, #10b981, #06b6d4);
+  }
+  .web-preview-header.jakarta {
+    background: linear-gradient(135deg, #0284c7, #3b82f6);
+  }
+  .web-preview-header.biz {
+    background: linear-gradient(135deg, #f59e0b, #e11d48);
+  }
+  .web-preview-header.jelajah {
+    background: linear-gradient(135deg, #059669, #4f46e5);
+  }
+  .web-preview-header.tekno {
+    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  }
+
+  .web-logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  .web-logo .hl {
+    background: #ffffff;
+    color: #000000;
+    padding: 2px 6px;
+    border-radius: 6px;
+    margin-left: 2px;
+  }
+
+  .web-tag {
+    align-self: flex-start;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .web-info {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .web-info h3 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .web-info p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .web-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+    gap: 10px;
+  }
+
+  .web-metrics span {
+    display: block;
+    font-size: 10px;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .web-metrics strong {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  /* TAB 2: MOBILE APP DESIGN */
+  .app-showcase-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .app-showcase-description h3 {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+
+  .desc-para {
+    color: #94a3b8;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .desc-bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .desc-bullet-item {
+    display: flex;
+    gap: 16px;
+  }
+
+  .bullet-check {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(6, 182, 212, 0.1);
+    color: #06b6d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .desc-bullet-item strong {
+    color: #ffffff;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .desc-bullet-item p {
+    color: #64748b;
+    font-size: 13px;
+    margin: 0;
+  }
+
+  .app-simulation-control {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .app-simulation-control p {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .sim-btns {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .sim-btn {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #94a3b8;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .sim-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+  }
+
+  .sim-btn.active {
+    background: #06b6d4;
+    color: #ffffff;
+    border-color: #06b6d4;
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+  }
+
+  /* Phone Mockup Frame */
+  .app-simulator-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .smartphone-frame {
+    width: 290px;
+    height: 580px;
+    background: #1e293b;
+    border: 8px solid #334155;
+    border-radius: 40px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+  }
+
+  .phone-notch {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 18px;
+    background: #334155;
+    border-radius: 0 0 15px 15px;
+    z-index: 100;
+  }
+
+  .phone-status-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 16px 2px;
+    font-size: 9px;
+    color: #ffffff;
+    font-family: sans-serif;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    z-index: 90;
+  }
+
+  .smartphone-screen {
+    width: 100%;
+    height: 100%;
+    background: #020617;
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .phone-home-indicator {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: #64748b;
+    border-radius: 2px;
+    z-index: 100;
+  }
+
+  .app-screen-content {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .app-screen-content.active {
+    display: block;
+  }
+
+  .app-screen-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* TAB 3: SAAS SYSTEM (GRAVSPACE SIMULATOR) */
+  .saas-showcase-layout {
+    display: none;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 50px;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .saas-showcase-layout.active {
+    display: grid;
+    opacity: 1;
+  }
+
+  /* GitHub Link Styling */
+  .github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    width: fit-content;
+  }
+
+  .github-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #6366f1;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.15);
+  }
+
+  .github-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* SaaS Platform Selector Styling */
+  .saas-platform-selector {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 24px;
+  }
+
+  .saas-plat-btn {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .saas-plat-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    transform: translateY(-1px);
+  }
+
+  .saas-plat-btn.active {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(6, 182, 212, 0.12));
+    border-color: #6366f1;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.15);
+  }
+
+  /* Badge styling */
+  .showcase-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    width: fit-content;
+  }
+
+  .showcase-badge.cyan {
+    background: rgba(6, 182, 212, 0.1);
+    color: #06b6d4;
+    border: 1px solid rgba(6, 182, 212, 0.2);
+  }
+
+  .showcase-badge.purple {
+    background: rgba(99, 102, 241, 0.1);
+    color: #6366f1;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+  }
+
+  .showcase-badge.teal {
+    background: rgba(20, 184, 166, 0.1);
+    color: #14b8a6;
+    border: 1px solid rgba(20, 184, 166, 0.2);
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .saas-nav-simulator {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+  }
+
+  .saas-nav-simulator p {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .saas-tabs-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .saas-tab-btn {
+    text-align: left;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #94a3b8;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .saas-tab-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+  }
+
+  .saas-tab-btn.active {
+    background: #6366f1;
+    color: #ffffff;
+    border-color: #6366f1;
+    box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
+  }
+
+  .tech-spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .spec-item {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .spec-item span {
+    display: block;
+    font-size: 9px;
+    color: #64748b;
+    margin-bottom: 4px;
+  }
+
+  .spec-item strong {
+    font-size: 11px;
+    color: #ffffff;
+  }
+
+  /* Desktop Laptop Mockup */
+  .saas-simulator-container {
+    width: 100%;
+  }
+
+  .laptop-frame {
+    background: #1e293b;
+    border: 10px solid #475569;
+    border-radius: 12px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+  }
+
+  .laptop-screen {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .saas-screen-content {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .saas-screen-content.active {
+    display: block;
+  }
+
+  .saas-screen-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 992px) {
+    .websites-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .app-showcase-layout, .saas-showcase-layout {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .app-simulator-container, .saas-simulator-container {
+      order: -1;
+    }
+  }
+</style>
+
+<script>
+  // Tab Switcher Logic
+  const tabBtns = document.querySelectorAll('.tab-btn') as NodeListOf<HTMLButtonElement>;
+  const tabContents = document.querySelectorAll('.tab-content') as NodeListOf<HTMLDivElement>;
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tabId = btn.getAttribute('data-tab');
+      
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabContents.forEach(c => c.classList.remove('active'));
+      
+      btn.classList.add('active');
+      document.getElementById(`tab-${tabId}`)?.classList.add('active');
+    });
+  });
+
+  // Phone App Simulator controls
+  const btnShowSplash = document.getElementById('btn-show-splash') as HTMLButtonElement | null;
+  const btnShowBooklet = document.getElementById('btn-show-booklet') as HTMLButtonElement | null;
+  const screenSplash = document.getElementById('screen-splash') as HTMLDivElement | null;
+  const screenBooklet = document.getElementById('screen-booklet') as HTMLDivElement | null;
+
+  btnShowSplash?.addEventListener('click', () => {
+    btnShowSplash.classList.add('active');
+    btnShowBooklet?.classList.remove('active');
+    screenSplash?.classList.add('active');
+    screenBooklet?.classList.remove('active');
+  });
+
+  btnShowBooklet?.addEventListener('click', () => {
+    btnShowBooklet.classList.add('active');
+    btnShowSplash?.classList.remove('active');
+    screenBooklet?.classList.add('active');
+    screenSplash?.classList.remove('active');
+  });
+
+  // SaaS Simulator controls
+  const saasBtnSignin = document.getElementById('saas-btn-signin') as HTMLButtonElement | null;
+  const saasBtnDash = document.getElementById('saas-btn-dash') as HTMLButtonElement | null;
+  const saasBtnBuckets = document.getElementById('saas-btn-buckets') as HTMLButtonElement | null;
+
+  const saasScreenSignin = document.getElementById('saas-screen-signin') as HTMLDivElement | null;
+  const saasScreenDash = document.getElementById('saas-screen-dash') as HTMLDivElement | null;
+  const saasScreenBuckets = document.getElementById('saas-screen-buckets') as HTMLDivElement | null;
+
+  function activateSaasScreen(activeBtn: HTMLButtonElement, activeScreen: HTMLDivElement) {
+    [saasBtnSignin, saasBtnDash, saasBtnBuckets].forEach(b => b?.classList.remove('active'));
+    [saasScreenSignin, saasScreenDash, saasScreenBuckets].forEach(s => s?.classList.remove('active'));
+    
+    activeBtn.classList.add('active');
+    activeScreen.classList.add('active');
+  }
+
+  saasBtnSignin?.addEventListener('click', () => saasScreenSignin && activateSaasScreen(saasBtnSignin, saasScreenSignin));
+  saasBtnDash?.addEventListener('click', () => saasScreenDash && activateSaasScreen(saasBtnDash, saasScreenDash));
+  saasBtnBuckets?.addEventListener('click', () => saasScreenBuckets && activateSaasScreen(saasBtnBuckets, saasScreenBuckets));
+
+  // SaaS Platform Switcher (GravSpace vs Nursynapse)
+  const saasPlatBtns = document.querySelectorAll('.saas-plat-btn') as NodeListOf<HTMLButtonElement>;
+  const saasLayouts = document.querySelectorAll('.saas-showcase-layout') as NodeListOf<HTMLDivElement>;
+
+  saasPlatBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const platformId = btn.getAttribute('data-saas-platform');
+      
+      saasPlatBtns.forEach(b => b.classList.remove('active'));
+      saasLayouts.forEach(l => l.classList.remove('active'));
+      
+      btn.classList.add('active');
+      document.getElementById(`saas-${platformId}-layout`)?.classList.add('active');
+    });
+  });
+</script>

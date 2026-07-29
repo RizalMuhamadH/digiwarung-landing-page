@@ -1,0 +1,219 @@
+---
+import { Image } from "astro:assets";
+import logoImg from "../../assets/logo.png";
+---
+
+<header class="header">
+  <div class="container header-container">
+    <a href="#" class="logo">
+      <Image src={logoImg} alt="DigiWarung Logo" class="logo-img" />
+      <span class="logo-text">Digi<span class="highlight">Warung</span></span>
+    </a>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="#services" class="nav-link">Layanan</a>
+      <a href="#portfolio" class="nav-link">Portofolio</a>
+      <a href="#stats" class="nav-link">Statistik</a>
+      <a href="#pricing" class="nav-link">Paket Harga</a>
+      <a href="#contact" class="btn btn-contact-nav">Konsultasi Gratis</a>
+    </nav>
+
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+</header>
+
+<script>
+  const mobileToggle = document.getElementById("mobileToggle");
+  const navMenu = document.getElementById("navMenu");
+
+  if (mobileToggle && navMenu) {
+    mobileToggle.addEventListener("click", () => {
+      mobileToggle.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+
+    // Close menu when clicking links
+    const navLinks = navMenu.querySelectorAll(".nav-link");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileToggle.classList.remove("active");
+        navMenu.classList.remove("active");
+      });
+    });
+  }
+</script>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10, 9, 21, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+  }
+
+  .logo-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .logo-text .highlight {
+    background: linear-gradient(135deg, #6366f1, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    position: relative;
+    padding: 6px 0;
+  }
+
+  .nav-link:hover {
+    color: #ffffff;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #6366f1, #10b981);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .btn-contact-nav {
+    background: linear-gradient(
+      135deg,
+      rgba(99, 102, 241, 0.15),
+      rgba(16, 185, 129, 0.15)
+    );
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.1);
+  }
+
+  .btn-contact-nav:hover {
+    border-color: #6366f1;
+    background: linear-gradient(135deg, #6366f1, #10b981);
+    box-shadow: 0 4px 25px rgba(99, 102, 241, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .mobile-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    .mobile-toggle {
+      display: flex;
+    }
+
+    .nav-menu {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 80px);
+      background: rgba(10, 9, 21, 0.95);
+      backdrop-filter: blur(20px);
+      flex-direction: column;
+      padding: 60px 40px;
+      gap: 30px;
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-menu.active {
+      transform: translateX(0);
+    }
+
+    .nav-link {
+      font-size: 18px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .btn-contact-nav {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+    }
+
+    /* Burger animation */
+    .mobile-toggle.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .mobile-toggle.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .mobile-toggle.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+</style>

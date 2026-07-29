@@ -1,0 +1,145 @@
+---
+---
+<section class="stats-section" id="stats">
+  <!-- Decorative Grid Line -->
+  <div class="stats-grid-overlay"></div>
+
+  <div class="container stats-container">
+    <div class="stat-item">
+      <div class="stat-num-wrapper">
+        <span class="stat-number">10Jt+</span>
+        <span class="stat-glow text-emerald"></span>
+      </div>
+      <p class="stat-label">Total Traffic / Bulan</p>
+      <p class="stat-desc">Di seluruh portal media Ayo Network yang kami kembangkan.</p>
+    </div>
+
+    <div class="stat-item">
+      <div class="stat-num-wrapper">
+        <span class="stat-number">99.98%</span>
+        <span class="stat-glow text-cyan"></span>
+      </div>
+      <p class="stat-label">SLA Uptime Sistem</p>
+      <p class="stat-desc">Jaminan kehandalan server database & dashboard real-time.</p>
+    </div>
+
+    <div class="stat-item">
+      <div class="stat-num-wrapper">
+        <span class="stat-number">0.8s</span>
+        <span class="stat-glow text-purple"></span>
+      </div>
+      <p class="stat-label">Rata-rata Load Time</p>
+      <p class="stat-desc">Pemuatan halaman super cepat untuk performa SEO maksimal.</p>
+    </div>
+
+    <div class="stat-item">
+      <div class="stat-num-wrapper">
+        <span class="stat-number">50+</span>
+        <span class="stat-glow text-pink"></span>
+      </div>
+      <p class="stat-label">Sistem Berhasil Dideploy</p>
+      <p class="stat-desc">Aplikasi mobile, dashboard SaaS, dan portal berita media.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .stats-section {
+    background-color: #06050b;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  }
+
+  .stats-grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: center;
+    pointer-events: none;
+  }
+
+  .stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .stat-item {
+    text-align: center;
+    position: relative;
+    padding: 20px;
+  }
+
+  .stat-num-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+
+  .stat-number {
+    font-size: 54px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1;
+    letter-spacing: -2px;
+    font-family: sans-serif;
+  }
+
+  /* Stat Glow Effects */
+  .stat-glow {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    filter: blur(20px);
+    opacity: 0.2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  .stat-glow.text-emerald { background-color: #10b981; }
+  .stat-glow.text-cyan { background-color: #06b6d4; }
+  .stat-glow.text-purple { background-color: #6366f1; }
+  .stat-glow.text-pink { background-color: #ec4899; }
+
+  .stat-label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+
+  .stat-desc {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 992px) {
+    .stats-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .stats-container {
+      grid-template-columns: 1fr;
+    }
+    .stat-number {
+      font-size: 44px;
+    }
+  }
+</style>
