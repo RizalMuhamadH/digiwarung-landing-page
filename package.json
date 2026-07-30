@@ -7,7 +7,8 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "bunx --bun astro build",
+    "start:bun": "bun ./dist/server/entry.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "generate-types": "wrangler types"

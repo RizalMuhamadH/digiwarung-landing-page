@@ -1,0 +1,6 @@
+{
+  "mode": "standalone",
+  "plugins": [
+    "./src/plugins/conditional-cache.mjs"
+  ]
+}
